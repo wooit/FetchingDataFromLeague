@@ -6,5 +6,14 @@ export default {
                 key: champ.key
             }
         ))
+    },
+    getChampionsByRoles(state){
+        return state.champions.map(champ => (
+            {
+                id : champ.id,
+                tags: champ.tags
+            }
+        ))
     }
+
 }
