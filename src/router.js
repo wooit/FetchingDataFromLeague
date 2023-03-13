@@ -5,6 +5,7 @@ import SummonerView from '@/views/SummonerView';
 import RotationView from '@/views/RotationView';
 import RankingView from '@/views/RankingView';
 import StatusServers from '@/views/StatusServers';
+import SelectedChampion from '@/components/champions/SelectedChampion'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,7 +17,10 @@ const router = createRouter({
             path: '/home', component: HomeView, name: 'home',
         },
         {
-            path: '/champions', component: ChampionsList, name: 'champions'
+            path: '/champions', component: ChampionsList, name: 'champions',
+        },
+        {
+            path: '/champions/:name/:key', name: 'selected-champion' ,component: SelectedChampion, props: true
         },
         {
             path: '/summoner' , component: SummonerView, name: 'summoner'
@@ -33,7 +37,8 @@ const router = createRouter({
         {
             path: '/:notFound(,*)', redirect: '/home'
         }
-    ]
+    ],
+    linkActiveClass: 'active',
 })
 
 export default router;

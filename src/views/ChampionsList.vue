@@ -1,4 +1,5 @@
 <template>
+  <router-view></router-view>
   <h1> Champions List </h1>
   <input v-model="selectedChampion" @click="resetSorting" type="text" autocomplete="off" placeholder="search for a champion">
   <button @click="resetSearch">reset</button>
@@ -9,19 +10,20 @@
   <button @click="sortBy('Assassin')">Assassin</button>
   <button @click="sortBy('Marksman')">Marksman</button>
   <button @click="sortBy('Support')">Support</button>
-  <ul v-for="champ in searchChamp" :key="champ.id"> {{ champ.id }}</ul>
+  <div>
+    <ul v-for="champ in searchChamp" :key="champ.id" @click="openChampionInfos(champ.id, champ.key)"> {{ champ.id }}</ul>
+  </div>
+
 </template>
 
 <script>
-// Here I want a search area for searching champion
-// Displaying image for every champion (clickable)
-// possibility to filter champions
-// possibility to sort champions
 export default {
   data() {
     return {
       selectedChampion: '',
       sortingByRole: '',
+      championName: null,
+      champKey: null,
     }
   },
   methods: {
@@ -35,6 +37,14 @@ export default {
     },
     resetSorting(){
       this.sortingByRole = ''
+    },
+    openChampionInfos(champName, key){
+      this.championName = champName
+      this.champKey = key
+      this.$router.push({ name: 'selected-champion', params: {
+          name: this.championName,
+          key: this.champKey
+      }})
     }
   },
   computed: {
