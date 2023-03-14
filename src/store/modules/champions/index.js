@@ -105,7 +105,7 @@ export default {
                         "attackdamageperlevel": 3,
                         "attackspeedperlevel": 2,
                         "attackspeed": 0.668
-                    }
+                    },
                 },
                 {
                     "version": "13.1.1",
