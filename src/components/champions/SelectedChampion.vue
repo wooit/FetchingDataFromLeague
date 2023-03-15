@@ -22,7 +22,10 @@
   </section>
 
   <section>
-    <display-skins></display-skins>
+    <display-skins :skins="skins"
+                   :name="champName"
+                   :champKey="champKey">
+    </display-skins>
   </section>
 
 
@@ -60,7 +63,8 @@ export default {
       roles: [],
       difficulty: 0,
       spells: [],
-      passive: {}
+      passive: {},
+      skins: [],
     }
   },
   methods: {
@@ -71,23 +75,24 @@ export default {
         console.log(error)
       })
     },
-    formatData(jsonContent){ //todo maybe i should send object so i dont declare that many data
+    formatData(jsonContent){
       //data for DisplayInfos component
       this.title = jsonContent.title
       this.lore = jsonContent.lore
       this.roles = jsonContent.tags
       this.difficulty = jsonContent.info.difficulty
+
       //data for DisplaySkills component
       let formattedSpells = []
-      jsonContent.spells.forEach(spell => {
-        //i need to define which case ability it is for later displaying video
+      jsonContent.spells.forEach((spell, index) => {
+        let arrCaseSpells = ['Q', 'W', 'E', 'R']
         formattedSpells.push(
             {
               id: spell.id,
               name: spell.name,
               description: spell.description,
               image: spell.image.full,
-              caseAbility: spell.id.slice(-1)
+              caseAbility: arrCaseSpells[index]
             }
         )
       })
@@ -97,7 +102,9 @@ export default {
         description: jsonContent.passive.description,
         image: jsonContent.passive.image.full,
       }
+
       //data for DisplaySkins component
+      this.skins = jsonContent.skins
     },
     redirectChampionList(){
       this.$router.push('/champions')
