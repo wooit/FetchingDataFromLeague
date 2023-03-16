@@ -11,9 +11,9 @@ export default {
         return state.champions.map(champ => (
             {
                 id : champ.id,
-                tags: champ.tags
+                tags: champ.tags,
+                key: champ.key
             }
         ))
-    }
-
+    },
 }
