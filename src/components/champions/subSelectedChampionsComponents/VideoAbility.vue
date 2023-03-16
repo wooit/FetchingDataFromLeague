@@ -20,7 +20,7 @@ export default {
   props: ['name', 'caseAbility', 'champKey'],
   data(){
     return {
-      // PROBLEM FOR SEVERAL SPELLS WHICH HAVE A mp4 url link and not 'webm'
+      // PROBLEM FOR AT LEAST ONE SPELL WHICH HAS A mp4 url link and not 'webm'
       videoLinkAbility: 'https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0'+this.champKey+'/ability_0'+this.champKey+'_'+this.caseAbility+'1.webm',
       videoLinkPassive: 'https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0'+this.champKey+'/ability_0'+this.champKey+'_P1.webm'
     }

@@ -41,7 +41,8 @@ export default {
     openChampionInfos(champName, key){
       this.championName = champName
       this.champKey = key
-      //champKey needs to be at least 3 char for retrieving spell ability video later
+      //todo need a more elegant refactor
+      //champKey with 2 char for retrieving spell ability video later
       if(this.champKey.length === 2){
         this.champKey = 0+this.champKey
       }
