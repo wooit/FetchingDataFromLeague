@@ -9,12 +9,16 @@ const store = createStore({
     },
     state(){
         return {
-            apiKey: process.env.VUE_APP_API_LEAGUE_OF_LEGENDS_KEY
+            apiKey: process.env.VUE_APP_API_LEAGUE_OF_LEGENDS_KEY,
+            queue: ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
         }
     },
     getters: {
         getApiKey(state){
             return state.apiKey
+        },
+        getListQueues(state){
+            return state.queue
         }
     }
 })

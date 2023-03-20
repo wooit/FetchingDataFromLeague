@@ -1,9 +1,14 @@
 <template>
   <h1> Rankings </h1>
+  <challenger-ranking></challenger-ranking>
 </template>
 
 <script>
-// data for ranking here: https://developer.riotgames.com/apis#league-v4/GET_getLeagueById
+import ChallengerRanking from '@/components/ranking/ChallengerRanking';
+
+export default {
+  components: { ChallengerRanking }
+}
 </script>
 
 
