@@ -1,22 +1,14 @@
 <template>
   <h1>Status Servers</h1>
+  <status-servers></status-servers>
 </template>
 
 <script>
-// data here : https://developer.riotgames.com/apis#lol-status-v4
+import statusServers from '@/components/statusServers/ServersInfos';
 
 export default {
-  data(){
-    return {
-
-    }
-  }
+  components: {
+    statusServers
+  },
 }
 </script>
-
-
-
-
-<style scoped>
-
-</style>
