@@ -11,13 +11,15 @@
   <button @click="sortBy('Marksman')">Marksman</button>
   <button @click="sortBy('Support')">Support</button>
   <div>
-    <ul v-for="champ in searchChamp" :key="champ.id" @click="openChampionInfos(champ.id, champ.key)"> {{ champ.id }}</ul>
+    <champion-card v-for="champ in searchChamp" :key="champ.key" :championKey="champ.key"> </champion-card>
   </div>
 
 </template>
 
 <script>
+import ChampionCard from "@/components/champions/ChampionCard";
 export default {
+  components: {ChampionCard},
   data() {
     return {
       selectedChampion: '',
@@ -38,19 +40,6 @@ export default {
     resetSorting(){
       this.sortingByRole = ''
     },
-    openChampionInfos(champName, key){
-      this.championName = champName
-      this.champKey = key
-      //todo need a more elegant refactor
-      //champKey with 2 char for retrieving spell ability video later
-      if(this.champKey.length === 2){
-        this.champKey = 0+this.champKey
-      }
-      this.$router.push({ name: 'selected-champion', params: {
-          name: this.championName,
-          key: this.champKey
-      }})
-    }
   },
   computed: {
     searchChamp() {
