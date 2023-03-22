@@ -1,13 +1,12 @@
 <template>
       <p>Select a Region</p>
       <div style="display: flex">
-        <select v-model="selectedRegion"> Region ...
+        <select v-model="selectedRegion" @change="submitRegion(selectedRegion)"> Region ...
           <label for="">Region...</label>
-          <option v-for="region in getListRegions" :key="region.id" :value="region.id">
+          <option v-for="region in getListRegions" :key="region.id" :value="region.id" >
             {{ region.id }}
           </option>
         </select>
-        <button @click="submitRegion(selectedRegion)"> GO </button>
       </div>
 </template>
 

@@ -1,13 +1,12 @@
 <template>
   <p>Select a Queue</p>
   <div style="display: flex">
-    <select v-model="selectedQueue"> Region ...
+    <select v-model="selectedQueue" @change="submitQueue(selectedQueue)"> Region ...
       <label for="">Queue...</label>
       <option v-for="queue in getListQueues" :key="queue" :value="queue">
         {{ queue }}
       </option>
     </select>
-    <button @click="submitQueue(selectedQueue)"> GO </button>
   </div>
 </template>
 
