@@ -1,6 +1,6 @@
-import mutations from "@/store/modules/serversStatus/mutations";
-import getters from "@/store/modules/serversStatus/getters";
-import actions from "@/store/modules/serversStatus/actions";
+import mutations from "@/store/modules/summoner/mutations";
+import getters from "@/store/modules/summoner/getters";
+import actions from "@/store/modules/summoner/actions";
 
 export default {
     namespaced: true,

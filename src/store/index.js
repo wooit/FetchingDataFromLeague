@@ -1,7 +1,7 @@
 import {createStore} from "vuex";
 import championsModule from "@/store/modules/champions";
 import serverStatusModule from "@/store/modules/serversStatus";
-import summonerModule from '@/store/modules/summoner/index'
+import summonerModule from '@/store/modules/summoner';
 
 const store = createStore({
     modules: {

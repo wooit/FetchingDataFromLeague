@@ -21,25 +21,25 @@ const router = createRouter({
             path: '/champions', component: ChampionsList, name: 'champions',
         },
         {
-            path: '/champions/:name/:key', name: 'selected-champion' ,component: SelectedChampion, props: true
+            path: '/champions/:name/:key', name: 'selected-champion' ,component: SelectedChampion, props: true,
         },
         {
             path: '/summoner' , component: SummonerView, name: 'summoner',
         },
         {
-            path: '/summoner/:summonerName', name: 'selected-summoner', components: SelectedSummoner
+            path: '/summoner/:name', name: 'selected-summoner', component: SelectedSummoner,
         },
         {
-            path: '/ranking', component: RankingView, name: 'ranking'
+            path: '/ranking', component: RankingView, name: 'ranking',
         },
         {
-            path: '/rotation', component: RotationView, name: 'rotation'
+            path: '/rotation', component: RotationView, name: 'rotation',
         },
         {
-            path: '/status-servers', component: StatusServers, name: 'status-servers'
+            path: '/status-servers', component: StatusServers, name: 'status-servers',
         },
         {
-            path: '/:notFound(,*)', redirect: '/home'
+            path: '/:notFound(,*)', redirect: '/home',
         }
     ],
     linkActiveClass: 'active',
