@@ -1,7 +1,7 @@
 export default {
     registerInfoSummoner(state, payload){
         state.summonerInfos = {
-            encryptedSummonerId: payload.summonerInfos,
+            encryptedSummonerId: payload.encryptedSummonerId,
             puuid: payload.puuid,
             name: payload.name,
             profileIconId: payload.profileIconId,
@@ -10,6 +10,5 @@ export default {
             accountId: payload.accountId,
             region: payload.region,
         }
-        // state.summonerInfos.push(payload)
     }
 }

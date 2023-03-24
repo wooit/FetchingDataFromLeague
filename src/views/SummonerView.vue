@@ -25,15 +25,16 @@ export default {
     fetchSummonerInfo(){
       if(this.selectedRegion && this.apiKey && this.selectedSummoner){
         axios.get('https://'+this.selectedRegion+'.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+this.selectedSummoner+'?api_key='+this.apiKey+'').then(response => {
+          console.log(response.data)
            this.summonerData = {
-            encryptedSummonerId: response.data.id,
-            puuid: response.data.puuid,
-            name: response.data.name,
-            profileIconId: response.data.profileIconId,
-            revisionDate: response.data.revisionDate,
-            summonerLevel: response.data.summonerLevel,
-            accountId: response.data.accountId,
-            region: this.selectedRegion,
+             encryptedSummonerId: response.data.id,
+             puuid: response.data.puuid,
+             name: response.data.name,
+             profileIconId: response.data.profileIconId,
+             revisionDate: response.data.revisionDate,
+             summonerLevel: response.data.summonerLevel,
+             accountId: response.data.accountId,
+             region: this.selectedRegion,
           }
         }).catch(error => {
           console.log(error)

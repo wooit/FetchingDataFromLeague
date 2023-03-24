@@ -6,7 +6,8 @@
 
   <section>
     <div>
-      <label><input type="radio" v-model="active" value="ChestsAvailable" /> Chest Available</label>
+      <label><input type="radio" v-model="active" value="ChampionsMastery" /> Champions Mastery</label>
+      <label><input type="radio" v-model="active" value="ChestsObtained" /> Chest Obtained</label>
       <label><input type="radio" v-model="active" value="MatchHistory"/> Match History</label>
     </div>
   </section>
@@ -24,7 +25,8 @@
 <script>
 import SummonerProfile from "@/components/summoner/subSummonerComponents/SummonerProfile";
 import MatchHistory from "@/components/summoner/subSummonerComponents/MatchHistory";
-import ChestsAvailable from "@/components/summoner/subSummonerComponents/ChestsAvailable";
+import ChestsObtained from "@/components/summoner/subSummonerComponents/ChestsObtained";
+import ChampionsMastery from "@/components/summoner/subSummonerComponents/ChampionsMastery"
 // todo I WILL NEED A FIND SUMMONER SEARCH FIELD IN TOP RIGHT CORNER => THIS WILL UPDATE STATE SUMMONER INFO (WONT BE POSSIBLE TO CHANGE REGION)
 
 // get last 10 games:  need region / puuid
@@ -33,7 +35,7 @@ import ChestsAvailable from "@/components/summoner/subSummonerComponents/ChestsA
 // https://europe.api.riotgames.com/lol/match/v5/matches/EUW1_6311416364?api_key=RGAPI-9fd3c989-4a67-4b31-8c54-1c05bd261446
 export default {
   components: {
-    SummonerProfile, MatchHistory, ChestsAvailable
+    SummonerProfile, MatchHistory, ChestsObtained, ChampionsMastery
   },
   data(){
     return {
