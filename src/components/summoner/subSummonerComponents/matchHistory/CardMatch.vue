@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div>
     <div v-for="data in gameData" :key="data">
 
       <div v-for="searchedPlayer in focusedPlayerData" :key="searchedPlayer.name">
@@ -8,30 +8,56 @@
           <p>{{ searchedPlayer.win}}</p>
           <p>{{ data.gameDuration}} min</p>
         </div>
+
         <div>
-          <img :src="`${champUrlIcon}`+ `${searchedPlayer.champion}`+'.png'" alt="">
+          <img :src="`${champUrlIcon}`+ `${searchedPlayer.champion}`+'.png'" :alt="searchedPlayer.champion">
           <span>{{ searchedPlayer.level }}</span>
           <div> {{ searchedPlayer.kills }} / {{ searchedPlayer.death }} / {{searchedPlayer.assists }}</div>
           <div> KDA: {{ searchedPlayer.kda }} </div>
+          <div>{{ searchedPlayer.spree }}</div>
 
           <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell1)}`" alt="">
           <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell2)}`" alt="">
 
-          <div v-for="item in searchedPlayer.items" :key="item">
-            <img :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
+          <div style="display: flex">
+            <div v-for="item in searchedPlayer.items" :key="item" >
+              <img :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
+            </div>
           </div>
         </div>
 
-        <div></div>
 
+        <div v-for="player in data.players" :key="player" style="display: flex">
+
+            <div>
+              <ul v-if="player.playerTeamId === 100">
+                <li style="display: flex">
+                  <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
+                  <div>{{ player.playerName }}</div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <ul v-if="player.playerTeamId === 200">
+                <li style="display: flex">
+                  <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
+                  <div>{{ player.playerName }}</div>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <button @click="openDetailedPoppin">MORE</button>
+
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
 <script>
-// https://europe.api.riotgames.com/lol/match/v5/matches/EUW1_6311416364?api_key=RGAPI-9fd3c989-4a67-4b31-8c54-1c05bd261446
 import axios from "axios";
+
 export default {
   props: ['matchId', 'regionAlias'],
   data(){
@@ -44,6 +70,9 @@ export default {
     }
   },
   methods: {
+    openDetailedPoppin(){
+      console.log('TODO later')
+    },
     getSummonerSpells(key){
       const spells =  this.$store.getters['summoner/getSummonerSpellInfos']
       const found = spells.find(icon => icon.key === key)
@@ -105,7 +134,8 @@ export default {
               summonerSpell1: player.summoner1Id.toString(),
               summonerSpell2: player.summoner2Id.toString(),
               teamId: player.teamId, // 100 or 200
-              kda: ((player.kills + player.assists) / player.deaths).toFixed(2)
+              kda: ((player.kills + player.assists) / player.deaths).toFixed(2),
+              spree: this.findBestKillingSpree(player.pentaKills, player.quadraKills, player.tripleKills, player.doubleKill)
             })
           }
         })
@@ -116,11 +146,23 @@ export default {
           players: playerData
         })
 
-        console.log(this.gameData)
       }).catch(error => {
         console.log(error)
       })
-    }
+    },
+    findBestKillingSpree(penta, quadra, triple, double){
+      if(penta !==0){
+        return 'Penta Kill'
+      } else if(quadra !==0){
+        return 'Quadra Kill'
+      } else if(triple !==0){
+        return 'Triple Kill'
+      } else if(double !==0){
+        return 'Double Kill'
+      } else {
+        return ''
+      }
+    },
   },
   computed: {
     apiKey(){
@@ -139,11 +181,5 @@ export default {
 </script>
 
 <style scoped>
-.test{
-  /*background-color: #c3b7b7;*/
-  /*width: 700px;*/
-  /*height: 200px;*/
-  /*margin-top: 10px;*/
-  /*margin-bottom: 10px;*/
-}
+
 </style>

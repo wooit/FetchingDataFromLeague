@@ -19,7 +19,7 @@ export default {
   data(){
     return {
       //todo feature for selecting the amount of match i wanna display: Maximum 100 but i need to verify amount of API CALL (risk error 429)
-      count: 1,
+      count: 3,
       messageRegionNotAvailable: false,
       regionAlias: '',
       listMatches: [],
