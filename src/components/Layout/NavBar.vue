@@ -18,7 +18,7 @@
 
 <style scoped>
 div{
-  background-color: cornflowerblue;
+  background-color: #121112;
   min-width: 1080px;
   padding-top: 10px;
   padding-bottom: 10px;
