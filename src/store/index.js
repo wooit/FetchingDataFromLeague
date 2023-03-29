@@ -1,11 +1,13 @@
 import {createStore} from "vuex";
 import championsModule from "@/store/modules/champions";
 import serverStatusModule from "@/store/modules/serversStatus";
+import summonerModule from '@/store/modules/summoner';
 
 const store = createStore({
     modules: {
         champions: championsModule,
-        serverStatus: serverStatusModule
+        serverStatus: serverStatusModule,
+        summoner: summonerModule
     },
     state(){
         return {

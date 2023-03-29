@@ -5,7 +5,8 @@ import SummonerView from '@/views/SummonerView';
 import RotationView from '@/views/RotationView';
 import RankingView from '@/views/RankingView';
 import StatusServers from '@/views/StatusServers';
-import SelectedChampion from '@/components/champions/SelectedChampion'
+import SelectedChampion from '@/components/champions/SelectedChampion';
+import SelectedSummoner from '@/components/summoner/SelectedSummoner';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -20,22 +21,25 @@ const router = createRouter({
             path: '/champions', component: ChampionsList, name: 'champions',
         },
         {
-            path: '/champions/:name/:key', name: 'selected-champion' ,component: SelectedChampion, props: true
+            path: '/champions/:name/:key', name: 'selected-champion' ,component: SelectedChampion, props: true,
         },
         {
-            path: '/summoner' , component: SummonerView, name: 'summoner'
+            path: '/summoner' , component: SummonerView, name: 'summoner',
         },
         {
-            path: '/ranking', component: RankingView, name: 'ranking'
+            path: '/summoner/:name', name: 'selected-summoner', component: SelectedSummoner,
         },
         {
-            path: '/rotation', component: RotationView, name: 'rotation'
+            path: '/ranking', component: RankingView, name: 'ranking',
         },
         {
-            path: '/status-servers', component: StatusServers, name: 'status-servers'
+            path: '/rotation', component: RotationView, name: 'rotation',
         },
         {
-            path: '/:notFound(,*)', redirect: '/home'
+            path: '/status-servers', component: StatusServers, name: 'status-servers',
+        },
+        {
+            path: '/:notFound(,*)', redirect: '/home',
         }
     ],
     linkActiveClass: 'active',
