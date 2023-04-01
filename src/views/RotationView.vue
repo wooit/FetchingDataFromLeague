@@ -1,6 +1,8 @@
 <template>
-  <h1>Rotation</h1>
-  <display-rotation></display-rotation>
+  <div>
+    <h1>Rotation</h1>
+    <display-rotation></display-rotation>
+  </div>
 </template>
 
 <script>

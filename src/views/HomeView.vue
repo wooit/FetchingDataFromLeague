@@ -1,12 +1,13 @@
 <template>
-  <h1>Home</h1>
-  <video-background
-      src="test2.mp4"
-      style="max-height: 100vh; height: 100vh;"
-  >
+  <div>
+    <h1>Home</h1>
+    <video-background
+        src="test2.mp4"
+        style="max-height: 100vh; height: 100vh;"
+    >
 
-  </video-background>
-
+    </video-background>
+  </div>
 </template>
 
 <script>

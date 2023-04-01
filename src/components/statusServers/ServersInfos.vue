@@ -1,31 +1,33 @@
 <template>
-  <select-region @selected-region="getSelectedRegion"></select-region>
+  <div>
+    <select-region @selected-region="getSelectedRegion"></select-region>
 
-  <section v-if="showStatusServerInformation">
-    <h1>{{ selectedRegion }} : {{ name }}</h1>
+    <section v-if="showStatusServerInformation">
+      <h1>{{ selectedRegion }} : {{ name }}</h1>
 
-    <div>
-      <h1>Incidents</h1>
-      <div v-for="incident in incidents" :key="incident.id" style="background-color: gray">
-        <p>{{ incident.title.content }}</p>
-        <p>id : {{ incident.id }}</p>
-        <p>created : {{ incident.createdAt }}</p>
-        <p>severity : {{ incident.severity }}</p>
-        <p>maintenanceStatus : {{ incident.maintenanceStatus }}</p>
-        <p>platforms : {{ incident.platforms }}</p>
-        <p>update : {{ incident.update }}</p>
-        <p>updateMessage : {{ incident.updateMessage }}</p>
-      </div>
-    </div>
-
-    <div>
       <div>
-        <h1>Maintenances</h1>
-        <p v-if="maintenances">There is no maintenance in progress in this region.</p>
-        <p v-else> {{ maintenances }}</p>
+        <h1>Incidents</h1>
+        <div v-for="incident in incidents" :key="incident.id" style="background-color: gray">
+          <p>{{ incident.title.content }}</p>
+          <p>id : {{ incident.id }}</p>
+          <p>created : {{ incident.createdAt }}</p>
+          <p>severity : {{ incident.severity }}</p>
+          <p>maintenanceStatus : {{ incident.maintenanceStatus }}</p>
+          <p>platforms : {{ incident.platforms }}</p>
+          <p>update : {{ incident.update }}</p>
+          <p>updateMessage : {{ incident.updateMessage }}</p>
+        </div>
       </div>
-    </div>
-  </section>
+
+      <div>
+        <div>
+          <h1>Maintenances</h1>
+          <p v-if="maintenances">There is no maintenance in progress in this region.</p>
+          <p v-else> {{ maintenances }}</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

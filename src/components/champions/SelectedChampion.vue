@@ -1,35 +1,34 @@
 <template>
-  <button @click="redirectChampionList">Champions List</button>
-  <h1>{{ champName }}</h1>
+  <div>
+    <button @click="redirectChampionList">Champions List</button>
+    <h1>{{ champName }}</h1>
 
-  <section>
-    <display-infos :name="champName"
-                   :champKey="champKey"
-                   :title="title"
-                   :lore="lore"
-                   :roles="roles"
-                   :difficulty="difficulty">
-    </display-infos>
-  </section>
+    <section>
+      <display-infos :name="champName"
+                     :champKey="champKey"
+                     :title="title"
+                     :lore="lore"
+                     :roles="roles"
+                     :difficulty="difficulty">
+      </display-infos>
+    </section>
 
-  <section>
-    <display-skills :name="champName"
-                    :champKey="champKey"
-                    :passive="passive"
-                    :spells="spells">
+    <section>
+      <display-skills :name="champName"
+                      :champKey="champKey"
+                      :passive="passive"
+                      :spells="spells">
 
-    </display-skills>
-  </section>
+      </display-skills>
+    </section>
 
-  <section>
-    <display-skins :skins="skins"
-                   :name="champName"
-                   :champKey="champKey">
-    </display-skins>
-  </section>
-
-
-
+    <section>
+      <display-skins :skins="skins"
+                     :name="champName"
+                     :champKey="champKey">
+      </display-skins>
+    </section>
+  </div>
 </template>
 
 <script>

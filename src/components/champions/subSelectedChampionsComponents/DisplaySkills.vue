@@ -1,6 +1,5 @@
 <template>
   <div style="display: flex">
-
     <section>
       <h1>Skills</h1>
       <div style="display: flex">

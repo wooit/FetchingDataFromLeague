@@ -1,19 +1,20 @@
 <template>
-  <router-view></router-view>
-  <h1> Champions List </h1>
-  <input v-model="selectedChampion" @click="resetSorting" type="text" autocomplete="off" placeholder="search for a champion">
-  <button @click="resetSearch">reset</button>
-  <br>
-  <button @click="sortBy('Tank')">Tank</button>
-  <button @click="sortBy('Fighter')">Fighter</button>
-  <button @click="sortBy('Mage')">Mage</button>
-  <button @click="sortBy('Assassin')">Assassin</button>
-  <button @click="sortBy('Marksman')">Marksman</button>
-  <button @click="sortBy('Support')">Support</button>
   <div>
-    <champion-card v-for="champ in searchChamp" :key="champ.key" :championKey="champ.key"> </champion-card>
+    <router-view></router-view>
+    <h1> Champions List </h1>
+    <input v-model="selectedChampion" @click="resetSorting" type="text" autocomplete="off" placeholder="search for a champion">
+    <button @click="resetSearch">reset</button>
+    <br>
+    <button @click="sortBy('Tank')">Tank</button>
+    <button @click="sortBy('Fighter')">Fighter</button>
+    <button @click="sortBy('Mage')">Mage</button>
+    <button @click="sortBy('Assassin')">Assassin</button>
+    <button @click="sortBy('Marksman')">Marksman</button>
+    <button @click="sortBy('Support')">Support</button>
+    <div>
+      <champion-card v-for="champ in searchChamp" :key="champ.key" :championKey="champ.key"> </champion-card>
+    </div>
   </div>
-
 </template>
 
 <script>
