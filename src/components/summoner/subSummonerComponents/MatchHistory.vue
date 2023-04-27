@@ -1,10 +1,12 @@
 <template>
-  <h1>Match History</h1>
-  <div v-if="messageRegionNotAvailable">
-    <p>Sorry Match history is not available in this region</p>
-  </div>
-  <div v-else>
-    <card-match v-for="matchId in listMatches" :matchId="matchId" :regionAlias="regionAlias" :key="matchId"></card-match>
+  <div>
+    <h1>Match History</h1>
+    <div v-if="messageRegionNotAvailable">
+      <p>Sorry Match history is not available in this region</p>
+    </div>
+    <div v-else>
+      <card-match v-for="matchId in listMatches" :matchId="matchId" :regionAlias="regionAlias" :key="matchId"></card-match>
+    </div>
   </div>
 </template>
 

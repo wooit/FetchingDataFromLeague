@@ -1,13 +1,15 @@
 <template>
-  <h1>Champions Mastery</h1>
-  <p> Here are all the champions that belong to you
-    They are filtered by total point mastery points</p>
+  <div>
+    <h1>Champions Mastery</h1>
+    <p> Here are all the champions that belong to you
+      They are filtered by total point mastery points</p>
 
-  <div v-for="champion in championsChestObtained" :key="champion.championId">
-    <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName">
-    <p>{{ champion.championName }}</p>
-    <p>level: {{ champion.championLevel }}</p>
-    <p>total points: {{ champion.championPoints }}</p>
+    <div v-for="champion in championsChestObtained" :key="champion.championId">
+      <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName">
+      <p>{{ champion.championName }}</p>
+      <p>level: {{ champion.championLevel }}</p>
+      <p>total points: {{ champion.championPoints }}</p>
+    </div>
   </div>
 </template>
 

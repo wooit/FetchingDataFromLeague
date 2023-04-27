@@ -1,29 +1,19 @@
 <template>
-  <h1>Skins</h1>
-
-  <div style="display: flex">
-    <div>
-      <h1>Skins available</h1>
-      <div v-for="skin in skins" :key="skin.id">
-        <button style="display: flex ; width: 400px" @click="displaySelectedSkin(skin.num)">
-          <img :src="`${skinSplashArt}${name +'_'+skin.num+'.jpg'}`" :alt="skin.name" style="height: 100px; width: 100px">
-          <p>{{ skin.name }}</p>
-        </button>
-
-      </div>
-    </div>
-
-    <div>
-      <img :src="`${skinSplashArt}${name +'_'+selectedSkin+'.jpg'}`" :alt="selectedSkin">
-    </div>
+  <div class="carousel-container">
+    <v-carousel height="auto" cycle interval="4000">
+      <v-carousel-item v-for="skin in skins" :key="skin.id"
+                       :src="`${skinSplashArt}${name +'_'+skin.num+'.jpg'}`" :alt="skin.name" cover>
+        <div class="name-container">
+          <p class="name-skin">
+            {{ skin.name }}
+          </p>
+        </div>
+      </v-carousel-item>
+    </v-carousel>
   </div>
-
-
-
 </template>
 
 <script>
-// todo REMOVE INLINE CSS LATER
 export default {
   props: ['name', 'champKey', 'skins'],
   data(){
@@ -32,11 +22,27 @@ export default {
       selectedSkin: 0
     }
   },
-  methods: {
-    displaySelectedSkin(skinNum){
-      this.selectedSkin = skinNum
-    }
-  }
 }
 
 </script>
+
+<style scoped>
+.carousel-container {
+  margin: auto;
+  width: 70vw;
+  justify-content: center;
+}
+
+.name-container {
+  background: rgb(37, 37, 37);
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  display: inline-block;
+}
+.name-skin {
+  opacity: 1;
+  font-weight: bold;
+}
+
+</style>

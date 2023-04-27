@@ -1,13 +1,15 @@
 <template>
-  <h1>Chests Obtained</h1>
-  <p> Here are all the champions for which you already got the reward chest this season
-    They are filtered by total point mastery points</p>
-  <p>You need to end the next season if you want to gain the reward chest for these champions again</p>
-  <div v-for="champion in championsChestObtained" :key="champion.championId">
-    <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName">
-    <p>{{ champion.championName }}</p>
-    <p>level: {{ champion.championLevel }}</p>
-    <p>total points: {{ champion.championPoints }}</p>
+  <div>
+    <h1>Chests Obtained</h1>
+    <p> Here are all the champions for which you already got the reward chest this season
+      They are filtered by total point mastery points</p>
+    <p>You need to end the next season if you want to gain the reward chest for these champions again</p>
+    <div v-for="champion in championsChestObtained" :key="champion.championId">
+      <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName">
+      <p>{{ champion.championName }}</p>
+      <p>level: {{ champion.championLevel }}</p>
+      <p>total points: {{ champion.championPoints }}</p>
+    </div>
   </div>
 </template>
 

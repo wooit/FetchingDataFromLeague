@@ -1,18 +1,17 @@
 <template>
-  <div v-if="caseAbility === 'passive'"> Passive ability
-    <video width="320" height="240" autoplay>
-      <source :src="videoLinkPassive" type="video/mp4">
-      <source :src="videoLinkPassive" type="video/ogg">
-    </video>
-  </div>
+    <div v-if="caseAbility === 'passive'">
+      <video autoplay style="max-height: 800px; height: 100vh;">
+        <source :src="videoLinkPassive" type="video/mp4">
+        <source :src="videoLinkPassive" type="video/ogg">
+      </video>
+    </div>
 
-  <div v-else>
-    {{ caseAbility }}
-    <video width="320" height="240" autoplay>
-      <source :src="videoLinkAbility" type="video/mp4">
-      <source :src="videoLinkAbility" type="video/ogg">
-    </video>
-  </div>
+    <div v-else>
+      <video autoplay style="max-height: 800px; height: 100vh;">
+        <source :src="videoLinkAbility" type="video/mp4">
+        <source :src="videoLinkAbility" type="video/ogg">
+      </video>
+    </div>
 </template>
 
 <script>

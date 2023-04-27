@@ -1,14 +1,16 @@
 <template>
-  <h3>challengers = the 300 most rated players in a given region </h3>
-  <select-region @selected-region="getSelectedRegion" ></select-region>
-  <select-queue @selected-queue="getSelectedQueue" ></select-queue>
+  <div>
+    <h3>challengers = the 300 most rated players in a given region </h3>
+    <select-region @selected-region="getSelectedRegion" ></select-region>
+    <select-queue @selected-queue="getSelectedQueue" ></select-queue>
 
-  <section v-if="selectedRegion && selectedQueue">
-    <h3>
-       {{ computedChoices }}
-    </h3>
-    <challenger-table :data="formattedDataChallenger" ></challenger-table>
-  </section>
+    <section v-if="selectedRegion && selectedQueue">
+      <h3>
+        {{ computedChoices }}
+      </h3>
+      <challenger-table :data="formattedDataChallenger" ></challenger-table>
+    </section>
+  </div>
 </template>
 
 <script>

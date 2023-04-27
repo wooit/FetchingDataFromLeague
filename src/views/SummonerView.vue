@@ -1,8 +1,10 @@
 <template>
-  <h1>Summoner Info</h1>
-  <select-region @selected-region="getSelectedRegion"></select-region>
-  <input type="search" placeholder="Search..." v-model="selectedSummoner">
-  <button @click="fetchSummonerInfo">go</button>
+  <div>
+    <h1>Summoner Info</h1>
+    <select-region @selected-region="getSelectedRegion"></select-region>
+    <input type="search" placeholder="Search..." v-model="selectedSummoner">
+    <button @click="fetchSummonerInfo">go</button>
+  </div>
 </template>
 
 <script>

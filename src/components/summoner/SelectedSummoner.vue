@@ -1,24 +1,26 @@
 <template>
-  <button @click="redirectBack">go back</button>
-  <section>
-    <summoner-profile :profileIconId="getSummonerInfo.profileIconId"></summoner-profile>
-  </section>
+  <div>
+    <button @click="redirectBack">go back</button>
+    <section>
+      <summoner-profile :profileIconId="getSummonerInfo.profileIconId"></summoner-profile>
+    </section>
 
-  <section>
-    <div>
-      <label><input type="radio" v-model="active" value="ChampionsMastery" /> Champions Mastery</label>
-      <label><input type="radio" v-model="active" value="ChestsObtained" /> Chest Obtained</label>
-      <label><input type="radio" v-model="active" value="MatchHistory"/> Match History</label>
-    </div>
-  </section>
+    <section>
+      <div>
+        <label><input type="radio" v-model="active" value="ChampionsMastery" /> Champions Mastery</label>
+        <label><input type="radio" v-model="active" value="ChestsObtained" /> Chest Obtained</label>
+        <label><input type="radio" v-model="active" value="MatchHistory"/> Match History</label>
+      </div>
+    </section>
 
-  <section>
+    <section>
       <div>
         <keep-alive>
           <component :is="active"></component>
         </keep-alive>
       </div>
-  </section>
+    </section>
+  </div>
 
 </template>
 

@@ -1,18 +1,24 @@
 <template>
-  <div style="display: flex">
+  <div class="section-container">
+    <section class="video-section">
+      <video-ability :name="name"
+                     :champKey="champKey"
+                     :case-ability="caseAbility"
+                     :key="rerenderCount">
+      </video-ability>
+    </section>
 
-    <section>
-      <h1>Skills</h1>
-      <div style="display: flex">
-        <button @click="showSpellDescAndVideo('passive')">
-          <img :src="`${linkPassiveImg}${passive.image}`" alt="passive">
+    <section class="spells-section">
+      <div class="spells">
+        <button class=spell-btn @click="showSpellDescAndVideo('passive')">
+          <img class="spell-img" :src="`${linkPassiveImg}${passive.image}`" alt="passive" :title="`${passive.name}`">
         </button>
-        <button  v-for="spell in spells" :key="spell.id" @click="showSpellDescAndVideo(spell.id)">
-          <img :src="`${linkSpellImg}${spell.image}`" :alt="spell.name">
+        <button class=spell-btn  v-for="spell in spells" :key="spell.id" @click="showSpellDescAndVideo(spell.id)">
+          <img class="spell-img" :src="`${linkSpellImg}${spell.image}`" :alt="spell.name" :title="`${spell.name}`">
         </button>
       </div>
 
-      <div>
+      <div class="description-spell">
         <div v-if="isAbilityChecked">
           <h3>{{ activeAbility.name }}</h3>
           <p>{{ activeAbility.description }}</p>
@@ -24,14 +30,7 @@
       </div>
     </section>
 
-    <section>
-      <video-ability :name="name"
-                     :champKey="champKey"
-                     :case-ability="caseAbility"
-                     :key="rerenderCount">
 
-      </video-ability>
-    </section>
   </div>
 </template>
 
@@ -68,3 +67,68 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    /*margin-top: -4rem;*/
+  }
+
+  .video-section {
+    align-self: center;
+    z-index: -100;
+  }
+
+  .spells-section {
+    width: 50rem;
+    margin-top: 2rem;
+    z-index: 10;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /*gap: 1rem;*/
+  }
+
+  .spells {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+  }
+
+  .spell-btn {
+    align-content: space-between;
+    background-color: black;
+    border:1px solid black;
+  }
+
+  .spell-btn:hover {
+    border:1px solid cyan;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  .spell-btn:focus {
+    border:1px solid cyan;
+  }
+
+  .spell-img {
+    border-color: black;
+  }
+
+  .description-spell {
+    border-color: gray;
+    z-index: 100;
+    margin-bottom: 5rem;
+    background-color: #121112;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  .description-spell h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+</style>
