@@ -13,7 +13,9 @@
     "vue": "^3.0.0",
     "vue-responsive-video-background-player": "^2.3.1",
     "vue-router": "^4.1.6",
-    "vuex": "^4.1.0"
+    "vuex": "^4.1.0",
+    "vuetify": "^3.1.5",
+    "@mdi/font": "^7.1.96"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.8",
