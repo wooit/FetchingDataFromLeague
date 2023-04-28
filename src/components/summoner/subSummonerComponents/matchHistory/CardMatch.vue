@@ -1,54 +1,72 @@
 <template>
   <div>
-    <div v-for="data in gameData" :key="data">
+    <div  v-for="data in gameData" :key="data">
+      <div :class="[win === 'Defeat' ? 'cardLose' : 'cardWin']"
+           v-for="searchedPlayer in focusedPlayerData"
+           :key="searchedPlayer.name"
+      >
 
-      <div v-for="searchedPlayer in focusedPlayerData" :key="searchedPlayer.name">
-        <div>
-          <h4>{{ data.gameMode }}</h4>
-          <p>{{ searchedPlayer.win}}</p>
-          <p>{{ data.gameDuration}} min</p>
+        <div class="game-info">
+          <div class="game-mode">
+            <h4>{{ data.gameMode }}</h4>
+          </div>
+          <div class="win-lose-duration">
+            <p v-if="searchedPlayer.win === 'win'" style="color: blue">{{ searchedPlayer.win}}</p>
+            <p v-else style="color: red">{{ searchedPlayer.win}}</p>
+            <p>{{ data.gameDuration}} min</p>
+          </div>
         </div>
 
-        <div>
-          <img :src="`${champUrlIcon}`+ `${searchedPlayer.champion}`+'.png'" :alt="searchedPlayer.champion">
-          <span>{{ searchedPlayer.level }}</span>
-          <div> {{ searchedPlayer.kills }} / {{ searchedPlayer.death }} / {{searchedPlayer.assists }}</div>
-          <div> KDA: {{ searchedPlayer.kda }} </div>
-          <div>{{ searchedPlayer.spree }}</div>
+        <div class="summoner-info">
+          <div class="summoner-data">
+            <div class="champ-icon-level">
+              <img :src="`${champUrlIcon}`+ `${searchedPlayer.champion}`+'.png'" :alt="searchedPlayer.champion">
+              <p>{{ searchedPlayer.level }}</p>
+            </div>
 
-          <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell1)}`" alt="">
-          <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell2)}`" alt="">
+            <div class="summoner-spells">
+              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell1)}`" alt="">
+              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell2)}`" alt="">
+            </div>
 
-          <div style="display: flex">
+            <div class="summoner-stats">
+              <p> {{ searchedPlayer.kills }} / {{ searchedPlayer.death }} / {{searchedPlayer.assists }}</p>
+              <div> {{ searchedPlayer.kda }} KDA </div>
+              <div class="spree">{{ searchedPlayer.spree }}</div>
+            </div>
+          </div>
+
+          <div class="summoner-items">
             <div v-for="item in searchedPlayer.items" :key="item" >
-              <img :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
+              <img class="items-img" :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
             </div>
           </div>
         </div>
 
 
-        <div v-for="player in data.players" :key="player" style="display: flex">
-
-            <div>
-              <ul v-if="player.playerTeamId === 100">
-                <li style="display: flex">
-                  <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
-                  <div>{{ player.playerName }}</div>
-                </li>
-              </ul>
+        <div class="players-info">
+          <div class="team1">
+            <div  v-for="player in data.players" :key="player">
+              <div class="player" v-if="player.playerTeamId === 100">
+                <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
+                <p>{{ player.playerName }}</p>
+              </div>
             </div>
+          </div>
 
-            <div>
-              <ul v-if="player.playerTeamId === 200">
-                <li style="display: flex">
-                  <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
-                  <div>{{ player.playerName }}</div>
-                </li>
-              </ul>
+          <div class="team2">
+            <div  v-for="player in data.players" :key="player">
+              <div class="player" v-if="player.playerTeamId === 200">
+                <img :src="`${champUrlIcon}`+ `${player.playerChampion}`+'.png'" :alt="player.playerChampion">
+                <p>{{ player.playerName }}</p>
+              </div>
             </div>
+          </div>
         </div>
 
-        <button @click="openDetailedPoppin">MORE</button>
+        <div class="more-info">
+          <button @click="openDetailedPoppin">MORE</button>
+        </div>
 
       </div>
     </div>
@@ -67,6 +85,7 @@ export default {
       champUrlIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/',
       itemIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/',
       summonerSpellIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/spell/',
+      win: ''
     }
   },
   methods: {
@@ -143,24 +162,24 @@ export default {
         this.gameData.push({
           gameMode: response.data.info.gameMode,
           gameDuration: Math.round(response.data.info.gameDuration / 60),
-          players: playerData
+          players: playerData,
         })
-
+        this.win = this.focusedPlayerData[0].win
       }).catch(error => {
         console.log(error)
       })
     },
     findBestKillingSpree(penta, quadra, triple, double){
-      if(penta !==0){
+      if(penta !== 0){
         return 'Penta Kill'
-      } else if(quadra !==0){
+      } else if(quadra !== 0){
         return 'Quadra Kill'
-      } else if(triple !==0){
+      } else if(triple !== 0){
         return 'Triple Kill'
-      } else if(double !==0){
+      } else if(double !== 0){
         return 'Double Kill'
       } else {
-        return ''
+        return 'No Kill Spree :('
       }
     },
   },
@@ -181,5 +200,161 @@ export default {
 </script>
 
 <style scoped>
+.cardWin {
+  background-color: #121112;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border: cornflowerblue solid;
+}
+.cardLose {
+  background-color: #121112;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border: lightcoral solid;
+}
 
+/* GAME INFOS CSS */
+
+.game-info {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-mode {
+  align-items: center;
+  height: 50%;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+}
+
+.win-lose-duration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* SUMMONER INFOS CSS */
+
+.summoner-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: auto;
+}
+
+.summoner-data {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50%;
+}
+
+.champ-icon-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  border-radius: 50%;
+}
+
+.champ-icon-level img{
+  border-radius: 50px;
+}
+
+.champ-icon-level p{
+  border-radius: 50%;
+  background-color: #121112;
+  padding: 0.5rem;
+  color: white;
+  margin-top: -1.5rem;
+  border: white solid;
+}
+
+.summoner-spells {
+  display: flex;
+  flex-direction: column;
+}
+
+.summoner-spells img {
+  border-radius: 30px;
+}
+
+.summoner-stats {
+  padding: 0.5rem;
+}
+
+.spree {
+  background-color: chocolate;
+  border-radius: 30px;
+  padding: 0.5rem;
+}
+
+.summoner-items {
+  display: flex;
+  flex-direction: row;
+  /*height: 50%;*/
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-img {
+  border: white solid;
+  max-width:100%;
+  max-height: 100%;
+}
+
+/* PLAYER INFOS CSS */
+
+.players-info {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  /*max-height: 100%;*/
+  align-items: center;
+}
+
+.team1 {
+  width: 50%;
+}
+
+.team2 {
+  width: 50%;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.player img {
+  width:10%;
+  height: 10%;
+}
+
+/* MORE INFOS CSS */
+
+.more-info {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.more-info button {
+  border: chocolate solid 0.1rem;
+  padding: 0.5rem;
+}
+
+.more-info button:hover {
+  border: cyan solid;
+}
 </style>

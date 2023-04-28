@@ -1,15 +1,30 @@
 <template>
-  <div>
-    <h1>Chests Obtained</h1>
-    <p> Here are all the champions for which you already got the reward chest this season
-      They are filtered by total point mastery points</p>
-    <p>You need to end the next season if you want to gain the reward chest for these champions again</p>
-    <div v-for="champion in championsChestObtained" :key="champion.championId">
-      <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName">
-      <p>{{ champion.championName }}</p>
-      <p>level: {{ champion.championLevel }}</p>
-      <p>total points: {{ champion.championPoints }}</p>
+  <div class="container">
+    <div class="chosen-category-explanations">
+      <h1>Chests Obtained</h1>
+      <p> Here are all the champions for which you already got the reward chest this season. They are filtered by total point mastery points</p>
+      <p>A new reward chest for these champions will be available again when the next season will start.</p>
     </div>
+
+    <div class="chosen-category-content">
+      <div class="champion-card" v-for="champion in championsChestObtained" :key="champion.championId">
+        <img :src="`${url}`+ `${champion.championName}`+'.png'" :alt="champion.champName" >
+        <p class="champion-name">{{ champion.championName }}</p>
+        <p class="champion-level">
+          <span class="text-color">Level: </span>
+          <span v-if="champion.championLevel === 7" style="color: orange"> {{ champion.championLevel }}</span>
+          <span v-if="champion.championLevel === 6" style="color: rgba(172,123,255,0.59)"> {{ champion.championLevel }}</span>
+          <span v-if="champion.championLevel === 5" style="color: #105be8"> {{ champion.championLevel }}</span>
+          <span v-if="champion.championLevel < 5 && champion.championLevel > 2" style="color: green"> {{ champion.championLevel }}</span>
+          <span v-if="champion.championLevel <= 2" style="color: white"> {{ champion.championLevel }}</span>
+        </p>
+        <p class="champion-points">
+          <span class="text-color">Points: </span>
+          {{ champion.championPoints }}
+        </p>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -59,3 +74,48 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chosen-category-explanations {
+    text-align: center;
+  }
+
+  .chosen-category-content {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .champion-card {
+    border: white solid;
+    border-radius: 30px;
+    padding: 1rem;
+    flex-basis: 0;
+  }
+
+  .champion-card:hover {
+    border-color: cyan;
+    transform: scale(1.1);
+    transition: transform .5s;
+  }
+
+  .champion-name {
+    text-align: center;
+  }
+
+  .champion-level,
+  .champion-points {
+    text-align: center;
+  }
+  .text-color {
+    color: gray;
+    font-weight: lighter;
+  }
+</style>
