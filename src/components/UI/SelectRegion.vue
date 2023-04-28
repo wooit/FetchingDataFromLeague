@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <p>Select a Region</p>
-    <div style="display: flex">
-      <select v-model="selectedRegion" @change="submitRegion(selectedRegion)"> Region ...
-        <label for="">Region...</label>
-        <option v-for="region in getListRegions" :key="region.id" :value="region.id" >
-          {{ region.id }}
-        </option>
-      </select>
-    </div>
+  <div class="container-select-region">
+    <v-select
+        v-model="selectedRegion"
+        clearable
+        label="Select a region"
+        :items="getListRegions"
+        variant="outlined"
+        color="cyan"
+    ></v-select>
   </div>
+
+
+
 </template>
 
 <script>
@@ -20,14 +22,30 @@ export default {
       selectedRegion: '',
     }
   },
-  methods: {
-    submitRegion(region){
-      this.$emit('selected-region', region)
-    }
-  },
   computed: {
     getListRegions(){
       return this.$store.getters['serverStatus/getAllRegions']
     },
-}}
+  },
+  watch: {
+    selectedRegion (region) {
+      console.log(region)
+      this.$emit('selected-region', region)
+    }
+  },
+}
 </script>
+
+<style scoped>
+  .container-select-region {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /*width: 20vw;*/
+  }
+  .container-select-region:hover,
+  .container-select-region:focus{
+    color: cyan;
+  }
+
+</style>

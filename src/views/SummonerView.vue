@@ -1,9 +1,24 @@
 <template>
-  <div>
-    <h1>Summoner Info</h1>
-    <select-region @selected-region="getSelectedRegion"></select-region>
-    <input type="search" placeholder="Search..." v-model="selectedSummoner">
-    <button @click="fetchSummonerInfo">go</button>
+  <div class="container">
+    <h1>Choose the region and the username of the summoner you are looking for </h1>
+    <div class="form">
+      <select-region class="select-region-component" @selected-region="getSelectedRegion"></select-region>
+      <v-text-field
+          class="input-find-summoner"
+          v-model="selectedSummoner"
+          clearable
+          label="Username"
+          variant="outlined"
+          color="cyan"
+      ></v-text-field>
+
+      <v-btn v-if="!selectedRegion || !selectedSummoner"  class="validate-btn" disabled>
+        GO
+      </v-btn>
+      <v-btn  v-else class="validate-btn" @click="fetchSummonerInfo">
+        GO
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -12,7 +27,9 @@ import SelectRegion from "@/components/UI/SelectRegion";
 import axios from "axios";
 
 export default {
-  components: {SelectRegion},
+  components: {
+    SelectRegion
+  },
   data(){
     return {
       selectedRegion: null,
@@ -59,5 +76,48 @@ export default {
 </script>
 
 <style scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    align-items: center;
+  }
+  h1 {
+    margin-top: 10vh;
+    text-align: center;
+  }
 
+  .form {
+    background-color: #121112;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: fit-content;
+  }
+
+ .select-region-component {
+   width: 33vw;
+ }
+
+ .input-find-summoner {
+   width: 33vw;
+ }
+
+ .input-find-summoner:hover,
+ .input-find-summoner:focus {
+   color: cyan;
+ }
+
+ .validate-btn {
+   margin: auto;
+   /*width: 33vw;*/
+   align-self: center;
+   font-weight: bold;
+ }
+
+ .validate-btn:hover {
+   color: black;
+   background-color: cyan;
+ }
 </style>
