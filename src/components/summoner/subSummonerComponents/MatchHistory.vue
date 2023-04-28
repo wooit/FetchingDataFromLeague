@@ -100,7 +100,5 @@ export default {
     height: 100%;
     max-width: 50vw;
     max-height: 50vh;
-    /*border-color: cornflowerblue;*/
-
   }
 </style>

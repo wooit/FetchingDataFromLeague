@@ -11,7 +11,7 @@
             <h4>{{ data.gameMode }}</h4>
           </div>
           <div class="win-lose-duration">
-            <p v-if="searchedPlayer.win === 'win'" style="color: blue">{{ searchedPlayer.win}}</p>
+            <p v-if="searchedPlayer.win === 'Victory'" style="color: cornflowerblue">{{ searchedPlayer.win}}</p>
             <p v-else style="color: red">{{ searchedPlayer.win}}</p>
             <p>{{ data.gameDuration}} min</p>
           </div>

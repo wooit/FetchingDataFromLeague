@@ -79,7 +79,7 @@ export default {
   }
 
   .section-display-chosen-component {
-    /*background-color: #121112;*/
+
   }
 
 </style>
