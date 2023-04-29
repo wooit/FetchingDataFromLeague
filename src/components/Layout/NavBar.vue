@@ -13,7 +13,7 @@
 
 </script>
 
-<style scoped>
+<style >
 
 nav {
   min-height: 5vh;

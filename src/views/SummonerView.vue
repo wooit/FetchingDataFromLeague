@@ -10,6 +10,7 @@
           label="Username"
           variant="outlined"
           color="cyan"
+          @keyup.enter="fetchSummonerInfo"
       ></v-text-field>
 
       <v-btn v-if="!selectedRegion || !selectedSummoner"  class="validate-btn" disabled>
