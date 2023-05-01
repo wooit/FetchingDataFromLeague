@@ -43,7 +43,6 @@
           </div>
         </div>
 
-
         <div class="players-info">
           <div class="team1">
             <div  v-for="player in data.players" :key="player">
@@ -318,7 +317,8 @@ export default {
 .players-info {
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 30%;
+  /*max-width: 100%;*/
   /*max-height: 100%;*/
   align-items: center;
 }
@@ -334,11 +334,16 @@ export default {
 .player {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .player img {
   width:10%;
   height: 10%;
+}
+
+.player p {
+  overflow: hidden;
 }
 
 /* MORE INFOS CSS */

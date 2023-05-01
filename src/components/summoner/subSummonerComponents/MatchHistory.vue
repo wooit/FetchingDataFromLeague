@@ -73,6 +73,7 @@ export default {
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .chosen-category-explanations {
@@ -93,12 +94,11 @@ export default {
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+
   }
 
   .card-match {
-    height: 100%;
     max-width: 50vw;
-    max-height: 50vh;
+    margin-bottom: 2rem;
   }
 </style>

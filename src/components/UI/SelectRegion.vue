@@ -29,7 +29,6 @@ export default {
   },
   watch: {
     selectedRegion (region) {
-      console.log(region)
       this.$emit('selected-region', region)
     }
   },
@@ -41,8 +40,8 @@ export default {
     display: flex;
     flex-direction: column;
     margin: auto;
-    /*width: 20vw;*/
   }
+
   .container-select-region:hover,
   .container-select-region:focus{
     color: cyan;

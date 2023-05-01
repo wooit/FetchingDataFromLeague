@@ -54,6 +54,10 @@ export default {
       text-align: end;
   }
 
+  .redirect-btn:hover {
+    color: cyan;
+  }
+
   .section-summoner-profile {
     background-color: #121112;
     display: flex;

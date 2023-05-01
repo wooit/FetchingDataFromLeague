@@ -10,6 +10,7 @@
           label="Username"
           variant="outlined"
           color="cyan"
+          @keyup.enter="fetchSummonerInfo"
       ></v-text-field>
 
       <v-btn v-if="!selectedRegion || !selectedSummoner"  class="validate-btn" disabled>
@@ -44,7 +45,6 @@ export default {
     fetchSummonerInfo(){
       if(this.selectedRegion && this.apiKey && this.selectedSummoner){
         axios.get('https://'+this.selectedRegion+'.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+this.selectedSummoner+'?api_key='+this.apiKey+'').then(response => {
-          console.log(response.data)
            this.summonerData = {
              encryptedSummonerId: response.data.id,
              puuid: response.data.puuid,

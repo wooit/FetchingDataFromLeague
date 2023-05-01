@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1> Rankings </h1>
     <challenger-ranking></challenger-ranking>
   </div>
 </template>

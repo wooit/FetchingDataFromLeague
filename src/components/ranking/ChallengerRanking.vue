@@ -1,34 +1,36 @@
 <template>
-  <div>
-    <h3>challengers = the 300 most rated players in a given region </h3>
-    <select-region @selected-region="getSelectedRegion" ></select-region>
-    <select-queue @selected-queue="getSelectedQueue" ></select-queue>
+  <div class="container">
+    <h3>Find out the players with the highest ranking in your region </h3>
+    <div class="form">
+      <select-region class="select-region-component" @selected-region="getSelectedRegion" ></select-region>
+      <select-queue class="select-queue-component" @selected-queue="getSelectedQueue" ></select-queue>
+    </div>
 
-    <section v-if="selectedRegion && selectedQueue">
-      <h3>
-        {{ computedChoices }}
-      </h3>
+    <section class="section-ranking-container" v-if="selectedRegion && selectedQueue">
+      <p class="queue-selected">{{ computedChoices }}</p>
       <challenger-table :data="formattedDataChallenger" ></challenger-table>
     </section>
   </div>
 </template>
 
 <script>
-// // data for ranking here: https://developer.riotgames.com/apis#league-v4/GET_getLeagueById
-
 import SelectRegion from "@/components/UI/SelectRegion";
 import SelectQueue from "@/components/UI/SelectQueue";
 import axios from "axios";
 import ChallengerTable from "@/components/ranking/subRankingComponent/ChallengerTable";
 
 export default {
-  components: {SelectQueue, SelectRegion, ChallengerTable},
+  components: {
+    SelectQueue,
+    SelectRegion,
+    ChallengerTable,
+  },
   data(){
     return {
       selectedRegion: null,
       selectedQueue: null,
       formattedDataChallenger: [],
-      // profileIconId: '',
+      currentRanking: 1,
     }
   },
   methods: {
@@ -51,26 +53,22 @@ export default {
         // this.requestIsValid = true
         const resp = response.data.entries
         const challengersSortedByPoints = resp.sort((a,b) =>b.leaguePoints - a.leaguePoints)
-        //todo I CANT GET ALL DATA AT ONCE => ERROR 429 TOO MANY REQUESTS
-        //todo I NEED A PAGINATION SYSTEM
         challengersSortedByPoints.forEach(challenger => {
-          // let summonerNameWithoutSpace = challenger.summonerName.replace(/\s+/g, '')
-          // axios.get('https://'+this.selectedRegion+'.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+summonerNameWithoutSpace+'?api_key='+this.apiKey+'').then(resp =>{
-          //    this.profileIconId = resp.data.profileIconId
-          // })
           this.formattedDataChallenger.push({
+            index: this.currentRanking,
             name: challenger.summonerName,
             lp: challenger.leaguePoints,
-            // summonerId : this.profileIconId,
             wins: challenger.wins,
             losses: challenger.losses,
             hotStreak: challenger.hotStreak,
             winrate: Math.round((challenger.wins / (challenger.losses+challenger.wins)) * 100)
           })
+          this.currentRanking++
         })
       }).catch(error =>{
         console.log(error)
       })
+      this.currentRanking = 1;
     }
   },
   computed: {
@@ -78,8 +76,46 @@ export default {
       return this.$store.getters['getApiKey']
     },
     computedChoices(){
-      return 'List of 300 first Summoner in '+this.selectedQueue+' in '+this.selectedRegion
+      return 'List of '+ this.formattedDataChallenger.length +' first Summoners in '+this.selectedQueue+' in '+this.selectedRegion
     }
   },
 }
 </script>
+
+<style scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    align-items: center;
+  }
+
+  .form {
+    background-color: #121112;
+    padding: 2rem;
+    border-radius: 30px;
+  }
+
+  .select-region-component {
+    width: 33vw;
+  }
+
+  .select-queue-component {
+    width: 33vw;
+  }
+
+  .section-ranking-container {
+    background-color: #121112;
+    border-radius: 30px;
+    padding: 1.5rem;
+    width: 80vw;
+  }
+
+  .queue-selected {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+
+</style>
