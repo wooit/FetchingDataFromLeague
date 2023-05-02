@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Status Servers</h1>
     <status-servers></status-servers>
   </div>
 </template>
