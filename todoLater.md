@@ -2,13 +2,9 @@ Things to fix in the future:
 
 1- All abilities video don't have the same url link. 99% of them end with '.webm' but I found at least one with '.mp4'
 
-3- I need pagination in ChallengerRanking component if I want to fetch icon summoner (otherwise error 429 too many requests)
-
 4- I need to remove console.log(error) and show error message instead
 
 7- I need to check if i should move my API call to the store??? 
-
-8- I need to implement an authentication system for practicing purpose (plus some features for logged users)
 
 
 CSS ideas:

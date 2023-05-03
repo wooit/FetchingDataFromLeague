@@ -39,29 +39,29 @@
         </div>
 
         <div v-else class="maintenances">
-          <div> TOTO </div>
+          <div  v-for="maintenance in maintenances" :key="maintenance.id">
+            <h2>{{ maintenance.title.content }} (id:{{ maintenance.id }})</h2>
+
+
+            <p>created : {{ maintenance.createdAt.toDateString() }}</p>
+            <p>severity : {{ maintenance.severity }}</p>
+            <p>platforms : {{ maintenance.platforms }}</p>
+
+            <div v-for="message in maintenance.updateMessage" :key="message">
+              <div class="updates-maintenance">
+                <h2>Update: <span class="id-update"> (id:  {{message.id }}) </span></h2>
+                <p>by {{ message.author }}</p>
+                <p>{{ message.translations.find(item => item.locale === 'en_US').content }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-
-
-
-
-      <!--      <div>-->
-      <!--        <div>-->
-      <!--          <h1>Maintenances</h1>-->
-      <!--          <p v-if="maintenances">There is no maintenance in progress in this region.</p>-->
-      <!--          <p v-else> {{ maintenances }}</p>-->
-      <!--        </div>-->
-      <!--      </div>-->
     </section>
   </div>
 </template>
 
 <script>
-// incident_severity	string	(Legal values: info, warning, critical)
-//maintenance_status	string	(Legal values: scheduled, in_progress, complete)
-// platforms	List[string]	(Legal values: windows, macos, android, ios, ps4, xbone, switch)
 import axios from "axios";
 import selectRegion from "@/components/UI/SelectRegion";
 export default {
@@ -84,8 +84,10 @@ export default {
 
         this.showStatusServerInformation = true
 
-        const test = response.data.incidents
-        test.forEach(incident => {
+        const respIncidents = response.data.incidents
+        this.name = response.data.name
+
+        respIncidents.forEach(incident => {
           this.incidents.push(
               {
                 id: incident.id,
@@ -99,10 +101,21 @@ export default {
           )
         })
 
-        this.maintenances = response.data.maintenances
-        this.name = response.data.name
+        const respMaintenances = response.data.maintenances
+        respMaintenances.forEach(maintenance => {
+          this.maintenances.push(
+              {
+                id: maintenance.id,
+                createdAt:  new Date(maintenance.created_at),
+                severity: maintenance.incident_severity,
+                platforms: maintenance.platforms,
+                title: maintenance.titles.find(item => item.locale === 'en_US'),
+                update: maintenance.updated_at,
+                updateMessage: maintenance.updates,
+              }
+          )
+        })
 
-        console.log(this.incidents)
         console.log(this.maintenances)
       }).catch(error =>{
         console.log(error)
@@ -158,7 +171,16 @@ svg {
   margin: auto;
 }
 
-.updates-incidents {
+.maintenances {
+  text-align: start;
+  padding: 2rem;
+  background-color: #121112;
+  width: 50%;
+  margin: auto;
+}
+
+.updates-incidents,
+.updates-maintenance {
   margin-top: 1rem;
   color: gray;
 }
