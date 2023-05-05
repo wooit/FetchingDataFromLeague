@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: red">
     <div  v-for="data in gameData" :key="data">
       <div :class="[win === 'Defeat' ? 'cardLose' : 'cardWin']"
            v-for="searchedPlayer in focusedPlayerData"
@@ -25,8 +25,8 @@
             </div>
 
             <div class="summoner-spells">
-              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell1)}`" alt="">
-              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell2)}`" alt="">
+              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell1)}`" alt="summoner-spell1">
+              <img :src="`${summonerSpellIcon}`+ `${getSummonerSpells(searchedPlayer.summonerSpell2)}`" alt="summoner-spell2">
             </div>
 
             <div class="summoner-stats">
@@ -38,7 +38,7 @@
 
           <div class="summoner-items">
             <div v-for="item in searchedPlayer.items" :key="item" >
-              <img class="items-img" :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
+              <img v-if="item !== 0" class="items-img" :src="`${itemIcon}`+ `${item}`+'.png'" alt="item">
             </div>
           </div>
         </div>
@@ -62,21 +62,29 @@
             </div>
           </div>
         </div>
-
         <div class="more-info">
           <button @click="openDetailedPoppin">MORE</button>
         </div>
-
       </div>
     </div>
+
+    <v-dialog v-model="detailMatchActive" width="auto">
+      <v-card >
+        <detailed-match class="detailed-match-poppin" :gameData="gameData"></detailed-match>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import detailedMatch from "@/components/summoner/subSummonerComponents/matchHistory/DetailedMatch";
 
 export default {
   props: ['matchId', 'regionAlias'],
+  components: {
+    detailedMatch
+  },
   data(){
     return {
       gameData: [],
@@ -84,12 +92,13 @@ export default {
       champUrlIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/',
       itemIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/item/',
       summonerSpellIcon: 'https://ddragon.leagueoflegends.com/cdn/13.6.1/img/spell/',
-      win: ''
+      win: '',
+      detailMatchActive: false
     }
   },
   methods: {
     openDetailedPoppin(){
-      console.log('TODO later')
+      this.detailMatchActive = true
     },
     getSummonerSpells(key){
       const spells =  this.$store.getters['summoner/getSummonerSpellInfos']
@@ -360,6 +369,13 @@ export default {
 }
 
 .more-info button:hover {
+  border: cyan solid;
+}
+
+.detailed-match-poppin {
+  height: 70vh;
+  width: 70vw;
+  background-color: #121112;
   border: cyan solid;
 }
 </style>
