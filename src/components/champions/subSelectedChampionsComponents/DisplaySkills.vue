@@ -72,7 +72,7 @@ export default {
   .section-container {
     display: flex;
     flex-direction: column;
-    /*margin-top: -4rem;*/
+    margin-top: 2rem;
   }
 
   .video-section {

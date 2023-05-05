@@ -4,7 +4,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 16l1.4-1.4l-1.6-1.6H16v-2h-4.2l1.6-1.6L12 8l-4 4l4 4Zm0 6q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z"/></svg>
       Champions List</button>
 
-    <h1 class="title">{{ champName }} : {{ title }}</h1>
+    <h1 class="title champion-name">{{ champName }} : {{ title }}</h1>
 
     <section class="section-infos">
       <display-infos :name="champName"
@@ -16,9 +16,8 @@
       </display-infos>
     </section>
 
-    <h1 class="title">SPELL ABILITIES </h1>
+    <h1 class="title spell-abilities">SPELL ABILITIES </h1>
     <section class="section-skills">
-
       <display-skills :name="champName"
                       :champKey="champKey"
                       :passive="passive"
@@ -29,8 +28,6 @@
 
     <h1 class="title">SKINS AVAILABLE</h1>
     <section class="section-skins">
-
-
       <display-skins :skins="skins"
                      :name="champName"
                      :champKey="champKey">
@@ -131,25 +128,33 @@ export default {
     text-align: center;
     color: darkgoldenrod;
     font-size: 2rem;
-    margin-bottom: 2rem;
+  }
+
+  .champion-name {
+    margin-top: 3rem;
+  }
+
+  .spell-abilities {
+    margin-top: 10rem;
   }
 
   .section-infos {
-    height: 76vh;
-    width: 100vw;
-    align-items: center;
+    /*align-items: center;*/
     margin-top: 2rem;
   }
 
   .section-skills {
-    /*height: 100vh;*/
-    /*width: 100vw;*/
+
     margin-bottom: 1rem;
   }
 
   .section-skins {
-    /*height: 70vh;*/
-    /*width: 70vw;*/
+
+  }
+
+  h1 {
+    /*margin-top: 2rem;*/
+    /*margin-bottom: 2rem;*/
   }
 
 </style>
