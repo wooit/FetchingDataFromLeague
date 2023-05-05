@@ -107,7 +107,7 @@ export default {
 
   th {
     font-size: 1.5rem;
-    margin: 2rem;
+    margin: 3rem;
   }
 
   .total-wins {

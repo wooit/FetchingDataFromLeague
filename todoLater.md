@@ -1,8 +1,6 @@
 Things to fix in the future:
 
-1- All abilities video don't have the same url link. 99% of them end with '.webm' but I found at least one with '.mp4'
-
-4- I need to remove console.log(error) and show error message instead
+~~4- I need to remove console.log(error) and show error message instead~~ need to find how to get error.response from axios to get status code
 
 7- I need to check if i should move my API call to the store??? 
 

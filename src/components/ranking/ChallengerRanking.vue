@@ -9,6 +9,10 @@
     <section class="section-ranking-container" v-if="selectedRegion && selectedQueue">
       <p class="queue-selected">{{ computedChoices }}</p>
       <challenger-table :data="formattedDataChallenger" ></challenger-table>
+      <div class="error-message" v-if="activeError">
+        <p>{{ errorMessage }}</p>
+        <p>Display Error Message according to status code error</p>
+      </div>
     </section>
   </div>
 </template>
@@ -31,6 +35,8 @@ export default {
       selectedQueue: null,
       formattedDataChallenger: [],
       currentRanking: 1,
+      activeError: false,
+      errorMessage: ''
     }
   },
   methods: {
@@ -66,7 +72,8 @@ export default {
           this.currentRanking++
         })
       }).catch(error =>{
-        console.log(error)
+        this.activeError = true
+        this.errorMessage = error.message
       })
       this.currentRanking = 1;
     }
@@ -115,6 +122,18 @@ export default {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.5rem;
+  }
+
+  .error-message {
+    background-color: #121112;
+    border-radius: 30px;
+    padding: 2rem;
+    border: red solid;
+  }
+
+  .error-message p {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
 

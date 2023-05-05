@@ -20,6 +20,10 @@
         GO
       </v-btn>
     </div>
+    <div class="error-message" v-if="activeError">
+      <p>{{ errorMessage }}</p>
+      <p>Display Error Message according to status code error</p>
+    </div>
   </div>
 </template>
 
@@ -36,6 +40,8 @@ export default {
       selectedRegion: null,
       selectedSummoner: '',
       summonerData: {},
+      activeError: false,
+      errorMessage: ''
     }
   },
   methods: {
@@ -55,14 +61,15 @@ export default {
              accountId: response.data.accountId,
              region: this.selectedRegion,
           }
-        }).catch(error => {
-          console.log(error)
-        }).finally(()=> {
           this.$store.commit('summoner/registerInfoSummoner', this.summonerData)
-
           this.$router.push({ name: 'selected-summoner', params: {
               name: this.selectedSummoner
           }})
+        }).catch(error => {
+          this.activeError = true
+          this.errorMessage = error.message
+        }).finally(()=> {
+          //todo need to remove finally bloc if i dont use loading spinner in the future
         })
         }
     }
@@ -119,5 +126,17 @@ export default {
  .validate-btn:hover {
    color: black;
    background-color: cyan;
+ }
+
+ .error-message {
+   background-color: #121112;
+   border-radius: 30px;
+   padding: 2rem;
+   border: red solid;
+ }
+
+ .error-message p:first-of-type {
+   text-align: center;
+   margin-bottom: 1rem;
  }
 </style>
