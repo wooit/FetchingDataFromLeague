@@ -111,14 +111,14 @@ export default {
   }
 
   .total-wins {
-    background-color: cornflowerblue;
+    color: cornflowerblue;
     border-radius: 20px;
     padding: 0.3rem;
     margin: 1rem;
   }
 
   .total-loses {
-    background-color: salmon;
+    color: salmon;
     border-radius: 20px;
     padding: 0.3rem;
     margin: 1rem;

@@ -14,7 +14,9 @@
 
     <section class="section-display-chosen-component">
         <keep-alive>
-          <component :is="active"></component>
+          <transition>
+            <component :is="active"></component>
+          </transition>
         </keep-alive>
     </section>
   </div>
@@ -84,6 +86,16 @@ export default {
 
   .section-display-chosen-component {
 
+  }
+
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 0.8s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
   }
 
 </style>

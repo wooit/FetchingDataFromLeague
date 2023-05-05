@@ -6,6 +6,7 @@
       <p>{{ errorMessage }}</p>
       <p>Display Error Message according to status code error</p>
     </div>
+    <transition>
     <section v-if="showStatusServerInformation">
       <h1>{{ selectedRegion }} : {{ name }}</h1>
 
@@ -61,6 +62,7 @@
         </div>
       </div>
     </section>
+    </transition>
   </div>
 </template>
 
@@ -202,5 +204,15 @@ svg {
 .error-message p {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

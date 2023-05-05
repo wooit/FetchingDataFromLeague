@@ -6,14 +6,17 @@
       <select-queue class="select-queue-component" @selected-queue="getSelectedQueue" ></select-queue>
     </div>
 
-    <section class="section-ranking-container" v-if="selectedRegion && selectedQueue">
-      <p class="queue-selected">{{ computedChoices }}</p>
-      <challenger-table :data="formattedDataChallenger" ></challenger-table>
-      <div class="error-message" v-if="activeError">
-        <p>{{ errorMessage }}</p>
-        <p>Display Error Message according to status code error</p>
-      </div>
-    </section>
+    <transition>
+      <section class="section-ranking-container" v-if="selectedRegion && selectedQueue">
+        <p class="queue-selected">{{ computedChoices }}</p>
+        <challenger-table :data="formattedDataChallenger" ></challenger-table>
+        <div class="error-message" v-if="activeError">
+          <p>{{ errorMessage }}</p>
+          <p>Display Error Message according to status code error</p>
+        </div>
+      </section>
+    </transition>
+
   </div>
 </template>
 
@@ -90,51 +93,61 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5vh;
-    align-items: center;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  align-items: center;
+}
 
-  .form {
-    background-color: #121112;
-    padding: 2rem;
-    border-radius: 30px;
-  }
+.form {
+  background-color: #121112;
+  padding: 2rem;
+  border-radius: 30px;
+}
 
-  .select-region-component {
-    width: 33vw;
-  }
+.select-region-component {
+  width: 33vw;
+}
 
-  .select-queue-component {
-    width: 33vw;
-  }
+.select-queue-component {
+  width: 33vw;
+}
 
-  .section-ranking-container {
-    background-color: #121112;
-    border-radius: 30px;
-    padding: 1.5rem;
-    width: 80vw;
-  }
+.section-ranking-container {
+  background-color: #121112;
+  border-radius: 30px;
+  padding: 1.5rem;
+  width: 80vw;
+}
 
-  .queue-selected {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-  }
+.queue-selected {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
 
-  .error-message {
-    background-color: #121112;
-    border-radius: 30px;
-    padding: 2rem;
-    border: red solid;
-  }
+.error-message {
+  background-color: #121112;
+  border-radius: 30px;
+  padding: 2rem;
+  border: red solid;
+}
 
-  .error-message p {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+.error-message p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
 
 </style>
