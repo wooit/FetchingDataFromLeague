@@ -1,50 +1,52 @@
 <template>
   <div class="container-home">
-    <video-background
-        class="animated-background"
-        src="test2.mp4"
-        style="max-height: 100vh; height: 100vh;"
-    >
+
+    <video-background class="animated-background" src="kda.mp4" style="max-height: 100vh; height: 100vh;">
       <section>
         <p>
-          <router-link class="nav-item" to="/champions">
-          Discover all <span> champions </span> available, learn more about their lore, capacities, skins ...
-          </router-link>
+          Discover all<span @click="routeTo('champions')"> champions </span>available, learn more about their lore, capacities, skins ...
         </p>
       </section>
+    </video-background>
 
+    <div class="section-separator"></div>
+
+    <video-background class="animated-background" src="leona.mp4" style="max-height: 100vh; height: 100vh;">
       <section>
         <p>
-          <router-link class="nav-item" to="/summoner">
-          Find out more information about a <span> summoner </span>, his level mastery for each champion, his match history ...
-          </router-link>
+          Find out more information about a <span @click="routeTo('summoner')"> summoner </span>, his level mastery for each champion, his match history ...
         </p>
       </section>
+    </video-background>
 
+    <div class="section-separator"></div>
+
+    <video-background class="animated-background" src="zed.mp4" style="max-height: 100vh; height: 100vh;">
       <section>
         <p>
-          <router-link class="nav-item" to="/rotation">
-          See which champions are available in the weekly <span> rotation </span> in your region ...
-          </router-link>
+          Checkout who is wrecking the <span @click="routeTo('ranking')"> ladder </span> in your region ...
         </p>
       </section>
+    </video-background>
 
+    <div class="section-separator"></div>
+
+    <video-background class="animated-background" src="sona.mp4" style="max-height: 100vh; height: 100vh;">
       <section>
         <p>
-          <router-link class="nav-item" to="/status-servers">
-          Stay updated about the current <span> status </span> of the server you are playing on ...
-          </router-link>
+          See which champions are available in the weekly <span @click="routeTo('rotation')"> rotation </span> in your region ...
         </p>
       </section>
+    </video-background>
 
+    <div class="section-separator"></div>
+
+    <video-background class="animated-background" src="diana.mp4" style="max-height: 100vh; height: 100vh;">
       <section>
         <p>
-          <router-link class="nav-item" to="/ranking">
-          Checkout who is wrecking the <span> ladder </span> in your region ...
-          </router-link>
+          Stay updated about the current <span @click="routeTo('status-servers')"> status </span> of the server you are playing on ...
         </p>
       </section>
-
     </video-background>
   </div>
 </template>
@@ -60,44 +62,60 @@ export default {
     return {
     }
   },
+  methods: {
+    routeTo(navItem){
+      console.log(navItem)
+      this.$router.push('/'+ navItem)
+    },
+  }
 }
 </script>
 
 <style scoped>
 
-  .container-home {
-    color: white;
-  }
+.container-home {
+  color: white;
+}
 
-  .animated-background {
-    opacity: 1;
-    border-radius: 0;
-  }
+.animated-background {
+  opacity: 1;
+  border-radius: 0;
+}
 
-  section {
-    margin-left: 1rem;
-    background-color: black;
-    width: fit-content;
-    opacity: 0.6;
-    border-radius: 25px;
-  }
+section {
+  background-color: black;
+  opacity: 0.6;
+  border-radius: 25px;
+  align-self: start;
+  font-size: 2rem;
+  width: 30%;
+  margin-left: 0.5rem;
+}
 
-  section:hover {
-    opacity: 1;
-  }
+section:hover {
+  opacity: 1;
+}
 
-  span {
-    color: cyan;
-    white-space: pre;
-  }
+span {
+  color: cyan;
+  white-space: pre;
+}
 
-  p {
-    display: flex;
-    padding: 0.5rem;
-  }
+p {
+  padding: 0.5rem;
+  margin: 2rem 2rem
+}
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
+p:hover {
+  cursor: pointer;
+}
+
+section p a {
+  text-decoration: none;
+}
+
+.section-separator {
+  height: 2rem;
+  background-color: black;
+}
 </style>
