@@ -41,7 +41,7 @@ export default {
       selectedSummoner: '',
       summonerData: {},
       activeError: false,
-      errorMessage: ''
+      errorMessage: '',
     }
   },
   methods: {
@@ -66,12 +66,14 @@ export default {
               name: this.selectedSummoner
           }})
         }).catch(error => {
+          //todo I cant get the error.response due to CORS policy when invalid request. No ACAO header present on the requested resource.
+          //todo If i want to retrieve status code for displaying custom messages in case of 404 , 500 etc , i need to make a backend able to contact API and send response to my frontend
           this.activeError = true
           this.errorMessage = error.message
         }).finally(()=> {
           //todo need to remove finally bloc if i dont use loading spinner in the future
         })
-        }
+      }
     }
   },
   computed: {
