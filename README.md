@@ -9,7 +9,7 @@
 ***
 Before I started this project, there was only one feature that I wished I could access easily inside the game. I just
 wanted to be able to see the list of all the champions with which I already got the reward chest. After looking at the
-documentation of the API, I saw that it was possible and that much more information were available. So I decided 
+documentation of the API, I saw that it was possible and that much more information were available. So I decided
 to take advantages of that by doing this hobby project by using Vue.js which I got to appreciate a lot lately.
 ## Technologies
 ***
@@ -24,7 +24,7 @@ How to get a valid API key
 * [Official Documentation](https://developer.riotgames.com/docs/portal)
 * You must log in with your Riot Games account by clicking on the button in the top right corner.  [](https://developer.riotgames.com/)
 * Create one if you don't already have one.
-* Once you are logged in, you will be provided an API key that you must copy and paste in the appropriate variable in .env file (VUE_APP_API_LEAGUE_OF_LEGENDS_KEY) 
+* Once you are logged in, you will be provided an API key that you must copy and paste in the appropriate variable in .env file (VUE_APP_API_LEAGUE_OF_LEGENDS_KEY)
 * This API key is just a Development key. It has to be regenerated every 24 hours. Requests are also limited to 20 requests every second or 100 requests every 2 minutes
 ***
 How to start this project on your local machine
