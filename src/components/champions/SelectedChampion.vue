@@ -55,7 +55,7 @@ export default {
       componentKey: 0,
       champName: this.$route.params.name,
       champKey: this.$route.params.key,
-      urlChampionData: process.env.VUE_APP_CHAMPION_DATA_PATCH_13_5_1,
+      urlChampionData: process.env.VUE_APP_CHAMPION_DATA_PATCH,
       title: '',
       lore: '',
       roles: [],
