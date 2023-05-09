@@ -21,7 +21,7 @@ A list of technologies used within the project:
 ***
 How to get a valid API key
 * [Official Documentation](https://developer.riotgames.com/docs/portal)
-* You must login with your Riot Games account by clicking on the button in the top right corner.  [](https://developer.riotgames.com/)
+* You must log in with your Riot Games account by clicking on the button in the top right corner.  [](https://developer.riotgames.com/)
 * Create one if you don't already have one.
 * Once you are logged in, you will be provided an API key that you must copy and paste in the appropriate variable in .env file (VUE_APP_API_LEAGUE_OF_LEGENDS_KEY) 
 * This API key is just a Development key. It has to be regenerated every 24 hours. Requests are also limited to 20 requests every second or 100 requests every 2 minutes
@@ -30,5 +30,5 @@ How to start this project on your local machine
 ```
 $ git clone https://github.com/wooit/FetchingDataFromLeague.git
 $ cd ../path/to/the/file
-$ npm install
+$ npm install (then past your API KEY in the variable VUE_APP_API_LEAGUE_OF_LEGENDS_KEY in .env file)
 $ npm start
