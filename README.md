@@ -9,7 +9,8 @@
 ***
 Before I started this project, there was only one feature that I wished I could access easily inside the game. I just
 wanted to be able to see the list of all the champions with which I already got the reward chest. After looking at the
-documentation of the API, I saw that it was possible and that much more information were available.
+documentation of the API, I saw that it was possible and that much more information were available. So I decided 
+to take advantages of that by doing this hobby project by using Vue.js which I got to appreciate a lot lately.
 ## Technologies
 ***
 A list of technologies used within the project:
