@@ -28,7 +28,7 @@ How to get a valid API key
 ***
 How to start this project on your local machine
 ```
-$ git clone https://github.com/wooit/FetchingDataFromLeague.git
+$ git clone the repo
 $ cd ../path/to/the/file
 $ npm install (then past your API KEY in the variable VUE_APP_API_LEAGUE_OF_LEGENDS_KEY in .env file)
 $ npm start
