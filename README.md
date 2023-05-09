@@ -20,7 +20,7 @@ A list of technologies used within the project:
 ## Installation
 ***
 How to get a valid API key
-* [Official Documentation](https://developer.riotgames.com/docs/portal)
+[Official Documentation](https://developer.riotgames.com/docs/portal)
 Summary:
 * You must login with your Riot Games account by clicking on the button in the top right corner.  [](https://developer.riotgames.com/)
 * Create one if you don't already have one.
