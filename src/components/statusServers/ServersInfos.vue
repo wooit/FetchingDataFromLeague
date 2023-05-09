@@ -2,7 +2,11 @@
   <div class="container">
     <h1>Checkout if there are incidents or maintenances on your server</h1>
     <select-region class="select-region-component" @selected-region="getSelectedRegion"></select-region>
-
+    <div class="error-message" v-if="activeError">
+      <p>{{ errorMessage }}</p>
+      <p>Display Error Message according to status code error</p>
+    </div>
+    <transition>
     <section v-if="showStatusServerInformation">
       <h1>{{ selectedRegion }} : {{ name }}</h1>
 
@@ -58,6 +62,7 @@
         </div>
       </div>
     </section>
+    </transition>
   </div>
 </template>
 
@@ -75,15 +80,14 @@ export default {
       maintenances: [],
       incidents: [],
       name: '',
+      activeError: false,
+      errorMessage: ''
     }
   },
   methods: {
     fetchStatusServerForSelectedRegion(){
       axios.get('https://'+this.selectedRegion+'.api.riotgames.com/lol/status/v4/platform-data?api_key='+this.apiKey).then(response => {
-        console.log(response.data)
-
         this.showStatusServerInformation = true
-
         const respIncidents = response.data.incidents
         this.name = response.data.name
 
@@ -116,11 +120,10 @@ export default {
           )
         })
 
-        console.log(this.maintenances)
       }).catch(error =>{
-        console.log(error)
+        this.activeError = true
+        this.errorMessage = error.message
       })
-
     },
 
     getSelectedRegion(region){
@@ -189,4 +192,27 @@ svg {
   font-size: small;
 }
 
+.error-message {
+  background-color: #121112;
+  border-radius: 30px;
+  padding: 2rem;
+  border: red solid;
+  width: 30%;
+  margin: 10rem auto;
+}
+
+.error-message p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>

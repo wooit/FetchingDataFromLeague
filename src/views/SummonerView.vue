@@ -20,6 +20,10 @@
         GO
       </v-btn>
     </div>
+    <div class="error-message" v-if="activeError">
+      <p>{{ errorMessage }}</p>
+      <p>Display Error Message according to status code error</p>
+    </div>
   </div>
 </template>
 
@@ -36,6 +40,8 @@ export default {
       selectedRegion: null,
       selectedSummoner: '',
       summonerData: {},
+      activeError: false,
+      errorMessage: '',
     }
   },
   methods: {
@@ -55,16 +61,19 @@ export default {
              accountId: response.data.accountId,
              region: this.selectedRegion,
           }
-        }).catch(error => {
-          console.log(error)
-        }).finally(()=> {
           this.$store.commit('summoner/registerInfoSummoner', this.summonerData)
-
           this.$router.push({ name: 'selected-summoner', params: {
               name: this.selectedSummoner
           }})
+        }).catch(error => {
+          //todo I cant get the error.response due to CORS policy when invalid request. No ACAO header present on the requested resource.
+          //todo If i want to retrieve status code for displaying custom messages in case of 404 , 500 etc , i need to make a backend able to contact API and send response to my frontend
+          this.activeError = true
+          this.errorMessage = error.message
+        }).finally(()=> {
+          //todo need to remove finally bloc if i dont use loading spinner in the future
         })
-        }
+      }
     }
   },
   computed: {
@@ -119,5 +128,17 @@ export default {
  .validate-btn:hover {
    color: black;
    background-color: cyan;
+ }
+
+ .error-message {
+   background-color: #121112;
+   border-radius: 30px;
+   padding: 2rem;
+   border: red solid;
+ }
+
+ .error-message p:first-of-type {
+   text-align: center;
+   margin-bottom: 1rem;
  }
 </style>

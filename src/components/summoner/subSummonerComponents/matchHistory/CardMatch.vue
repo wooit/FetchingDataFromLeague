@@ -69,7 +69,7 @@
     </div>
 
     <v-dialog v-model="detailMatchActive" width="auto">
-      <v-card >
+      <v-card>
         <detailed-match class="detailed-match-poppin" :gameData="gameData"></detailed-match>
       </v-card>
     </v-dialog>

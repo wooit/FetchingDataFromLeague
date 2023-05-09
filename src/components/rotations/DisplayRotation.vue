@@ -13,10 +13,16 @@
     </div>
 
     <select-region class="select-region-component" @selected-region="getSelectedRegion"></select-region>
+    <div class="error-message" v-if="activeError">
+      <p>{{ errorMessage }}</p>
+      <p>Display Error Message according to status code error</p>
+    </div>
 
-    <section class="list-champions-rotation" v-if="rotationHasBeenFetched">
-      <champion-card class="champion-card" v-for="champion in listRotation" :key="champion" :championKey="champion"></champion-card>
-    </section>
+    <transition>
+      <section class="list-champions-rotation" v-if="rotationHasBeenFetched">
+        <champion-card class="champion-card" v-for="champion in listRotation" :key="champion" :championKey="champion"></champion-card>
+      </section>
+    </transition>
   </div>
 </template>
 
@@ -36,7 +42,9 @@ export default {
       listRotation: [],
       rotationHasBeenFetched: false,
       championKey: '',
-      championData: []
+      championData: [],
+      activeError: false,
+      errorMessage: ''
     }
   },
   methods: {
@@ -49,7 +57,8 @@ export default {
         this.rotationHasBeenFetched = true
         this.listRotation = response.data.freeChampionIds
       }).catch(error => {
-        console.log(error)
+        this.activeError = true
+        this.errorMessage = error.message
       })
     }
   },
@@ -108,4 +117,27 @@ export default {
   flex-basis: 0;
 }
 
+.error-message {
+  background-color: #121112;
+  border-radius: 30px;
+  padding: 2rem;
+  border: red solid;
+  width: 30%;
+  margin: auto;
+}
+
+.error-message p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>

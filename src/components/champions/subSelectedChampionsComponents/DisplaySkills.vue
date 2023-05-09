@@ -43,8 +43,8 @@ export default {
   props: ['spells', 'passive', 'name', 'champKey'],
   data(){
     return {
-      linkSpellImg: process.env.VUE_APP_SPELL_IMG_PATCH_13_5_1,
-      linkPassiveImg: process.env.VUE_APP_SPELL_PASSIVE_PATCH_13_5_1,
+      linkSpellImg: process.env.VUE_APP_SPELL_IMG_PATCH,
+      linkPassiveImg: process.env.VUE_APP_SPELL_PASSIVE_PATCH,
       activeAbility: '',
       isAbilityChecked: false,
       caseAbility: 'passive',
@@ -72,7 +72,7 @@ export default {
   .section-container {
     display: flex;
     flex-direction: column;
-    /*margin-top: -4rem;*/
+    margin-top: 2rem;
   }
 
   .video-section {

@@ -107,18 +107,18 @@ export default {
 
   th {
     font-size: 1.5rem;
-    margin: 2rem;
+    margin: 3rem;
   }
 
   .total-wins {
-    background-color: cornflowerblue;
+    color: cornflowerblue;
     border-radius: 20px;
     padding: 0.3rem;
     margin: 1rem;
   }
 
   .total-loses {
-    background-color: salmon;
+    color: salmon;
     border-radius: 20px;
     padding: 0.3rem;
     margin: 1rem;
