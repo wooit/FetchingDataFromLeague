@@ -8,7 +8,7 @@ export default {
         return {
             champions : [
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Aatrox",
                     "key": "266",
                     "name": "Aatrox",
@@ -58,7 +58,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ahri",
                     "key": "103",
                     "name": "Ahri",
@@ -108,7 +108,7 @@ export default {
                     },
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Akali",
                     "key": "84",
                     "name": "Akali",
@@ -157,7 +157,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Akshan",
                     "key": "166",
                     "name": "Akshan",
@@ -207,7 +207,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Alistar",
                     "key": "12",
                     "name": "Alistar",
@@ -257,7 +257,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Amumu",
                     "key": "32",
                     "name": "Amumu",
@@ -307,7 +307,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Anivia",
                     "key": "34",
                     "name": "Anivia",
@@ -357,7 +357,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Annie",
                     "key": "1",
                     "name": "Annie",
@@ -406,7 +406,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Aphelios",
                     "key": "523",
                     "name": "Aphelios",
@@ -455,7 +455,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ashe",
                     "key": "22",
                     "name": "Ashe",
@@ -505,7 +505,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "AurelionSol",
                     "key": "136",
                     "name": "Aurelion Sol",
@@ -554,7 +554,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Azir",
                     "key": "268",
                     "name": "Azir",
@@ -604,7 +604,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Bard",
                     "key": "432",
                     "name": "Bard",
@@ -654,7 +654,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Belveth",
                     "key": "200",
                     "name": "Bel'Veth",
@@ -703,7 +703,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Blitzcrank",
                     "key": "53",
                     "name": "Blitzcrank",
@@ -753,7 +753,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Brand",
                     "key": "63",
                     "name": "Brand",
@@ -802,7 +802,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Braum",
                     "key": "201",
                     "name": "Braum",
@@ -852,7 +852,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Caitlyn",
                     "key": "51",
                     "name": "Caitlyn",
@@ -901,7 +901,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Camille",
                     "key": "164",
                     "name": "Camille",
@@ -951,7 +951,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Cassiopeia",
                     "key": "69",
                     "name": "Cassiopeia",
@@ -1000,7 +1000,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Chogath",
                     "key": "31",
                     "name": "Cho'Gath",
@@ -1050,7 +1050,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Corki",
                     "key": "42",
                     "name": "Corki",
@@ -1099,7 +1099,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Darius",
                     "key": "122",
                     "name": "Darius",
@@ -1149,7 +1149,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Diana",
                     "key": "131",
                     "name": "Diana",
@@ -1199,7 +1199,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Draven",
                     "key": "119",
                     "name": "Draven",
@@ -1248,7 +1248,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "DrMundo",
                     "key": "36",
                     "name": "Dr. Mundo",
@@ -1298,7 +1298,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ekko",
                     "key": "245",
                     "name": "Ekko",
@@ -1348,7 +1348,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Elise",
                     "key": "60",
                     "name": "Elise",
@@ -1398,7 +1398,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Evelynn",
                     "key": "28",
                     "name": "Evelynn",
@@ -1448,7 +1448,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ezreal",
                     "key": "81",
                     "name": "Ezreal",
@@ -1498,7 +1498,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Fiddlesticks",
                     "key": "9",
                     "name": "Fiddlesticks",
@@ -1548,7 +1548,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Fiora",
                     "key": "114",
                     "name": "Fiora",
@@ -1598,7 +1598,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Fizz",
                     "key": "105",
                     "name": "Fizz",
@@ -1648,7 +1648,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Galio",
                     "key": "3",
                     "name": "Galio",
@@ -1698,7 +1698,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Gangplank",
                     "key": "41",
                     "name": "Gangplank",
@@ -1747,7 +1747,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Garen",
                     "key": "86",
                     "name": "Garen",
@@ -1797,7 +1797,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Gnar",
                     "key": "150",
                     "name": "Gnar",
@@ -1847,7 +1847,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Gragas",
                     "key": "79",
                     "name": "Gragas",
@@ -1897,7 +1897,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Graves",
                     "key": "104",
                     "name": "Graves",
@@ -1946,7 +1946,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Gwen",
                     "key": "887",
                     "name": "Gwen",
@@ -1996,7 +1996,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Hecarim",
                     "key": "120",
                     "name": "Hecarim",
@@ -2046,7 +2046,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Heimerdinger",
                     "key": "74",
                     "name": "Heimerdinger",
@@ -2096,7 +2096,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Illaoi",
                     "key": "420",
                     "name": "Illaoi",
@@ -2146,7 +2146,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Irelia",
                     "key": "39",
                     "name": "Irelia",
@@ -2196,7 +2196,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ivern",
                     "key": "427",
                     "name": "Ivern",
@@ -2246,7 +2246,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Janna",
                     "key": "40",
                     "name": "Janna",
@@ -2296,7 +2296,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "JarvanIV",
                     "key": "59",
                     "name": "Jarvan IV",
@@ -2346,7 +2346,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Jax",
                     "key": "24",
                     "name": "Jax",
@@ -2396,7 +2396,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Jayce",
                     "key": "126",
                     "name": "Jayce",
@@ -2446,7 +2446,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Jhin",
                     "key": "202",
                     "name": "Jhin",
@@ -2496,7 +2496,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Jinx",
                     "key": "222",
                     "name": "Jinx",
@@ -2545,7 +2545,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kaisa",
                     "key": "145",
                     "name": "Kai'Sa",
@@ -2594,7 +2594,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kalista",
                     "key": "429",
                     "name": "Kalista",
@@ -2643,7 +2643,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Karma",
                     "key": "43",
                     "name": "Karma",
@@ -2693,7 +2693,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Karthus",
                     "key": "30",
                     "name": "Karthus",
@@ -2742,7 +2742,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kassadin",
                     "key": "38",
                     "name": "Kassadin",
@@ -2792,7 +2792,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Katarina",
                     "key": "55",
                     "name": "Katarina",
@@ -2842,7 +2842,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kayle",
                     "key": "10",
                     "name": "Kayle",
@@ -2892,7 +2892,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kayn",
                     "key": "141",
                     "name": "Kayn",
@@ -2942,7 +2942,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kennen",
                     "key": "85",
                     "name": "Kennen",
@@ -2992,7 +2992,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Khazix",
                     "key": "121",
                     "name": "Kha'Zix",
@@ -3041,7 +3041,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kindred",
                     "key": "203",
                     "name": "Kindred",
@@ -3090,7 +3090,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Kled",
                     "key": "240",
                     "name": "Kled",
@@ -3140,7 +3140,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "KogMaw",
                     "key": "96",
                     "name": "Kog'Maw",
@@ -3190,7 +3190,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "KSante",
                     "key": "897",
                     "name": "K'Sante",
@@ -3240,7 +3240,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Leblanc",
                     "key": "7",
                     "name": "LeBlanc",
@@ -3290,7 +3290,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "LeeSin",
                     "key": "64",
                     "name": "Lee Sin",
@@ -3340,7 +3340,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Leona",
                     "key": "89",
                     "name": "Leona",
@@ -3390,7 +3390,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Lillia",
                     "key": "876",
                     "name": "Lillia",
@@ -3440,7 +3440,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Lissandra",
                     "key": "127",
                     "name": "Lissandra",
@@ -3489,7 +3489,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Lucian",
                     "key": "236",
                     "name": "Lucian",
@@ -3538,7 +3538,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Lulu",
                     "key": "117",
                     "name": "Lulu",
@@ -3588,7 +3588,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Lux",
                     "key": "99",
                     "name": "Lux",
@@ -3638,7 +3638,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Malphite",
                     "key": "54",
                     "name": "Malphite",
@@ -3688,7 +3688,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Malzahar",
                     "key": "90",
                     "name": "Malzahar",
@@ -3738,7 +3738,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Maokai",
                     "key": "57",
                     "name": "Maokai",
@@ -3788,7 +3788,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "MasterYi",
                     "key": "11",
                     "name": "Master Yi",
@@ -3838,7 +3838,56 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
+                    "id": "Milio",
+                    "key": "902",
+                    "name": "Milio",
+                    "title": "The Gentle Flame",
+                    "blurb": "Milio is a warmhearted boy from Ixtal who has, despite his young age, mastered the fire axiom and discovered something new: soothing fire. With this newfound power, Milio plans to help his family escape their exile by joining the Yun Tal—just like his...",
+                    "info": {
+                    "attack": 2,
+                        "defense": 4,
+                        "magic": 8,
+                        "difficulty": 5
+                    },
+                    "image": {
+                        "full": "Milio.png",
+                        "sprite": "champion2.png",
+                        "group": "champion",
+                            "x": 336,
+                            "y": 48,
+                            "w": 48,
+                            "h": 48
+                    },
+                    "tags": [
+                        "Support"
+                    ],
+                    "partype": "Mana",
+                    "stats": {
+                    "hp": 560,
+                        "hpperlevel": 88,
+                        "mp": 365,
+                        "mpperlevel": 43,
+                        "movespeed": 330,
+                        "armor": 28,
+                        "armorperlevel": 4.9,
+                        "spellblock": 30,
+                        "spellblockperlevel": 1.3,
+                        "attackrange": 525,
+                        "hpregen": 5,
+                        "hpregenperlevel": 0.5,
+                        "mpregen": 11.5,
+                        "mpregenperlevel": 0.4,
+                        "crit": 0,
+                        "critperlevel": 0,
+                        "attackdamage": 48,
+                        "attackdamageperlevel": 3.2,
+                        "attackspeedperlevel": 3,
+                        "attackspeed": 0.625
+                    }
+                },
+                {
+                    "version": "13.9.1",
                     "id": "MissFortune",
                     "key": "21",
                     "name": "Miss Fortune",
@@ -3887,7 +3936,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "MonkeyKing",
                     "key": "62",
                     "name": "Wukong",
@@ -3937,7 +3986,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Mordekaiser",
                     "key": "82",
                     "name": "Mordekaiser",
@@ -3986,7 +4035,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Morgana",
                     "key": "25",
                     "name": "Morgana",
@@ -4036,7 +4085,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nami",
                     "key": "267",
                     "name": "Nami",
@@ -4086,7 +4135,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nasus",
                     "key": "75",
                     "name": "Nasus",
@@ -4136,7 +4185,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nautilus",
                     "key": "111",
                     "name": "Nautilus",
@@ -4186,7 +4235,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Neeko",
                     "key": "518",
                     "name": "Neeko",
@@ -4236,7 +4285,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nidalee",
                     "key": "76",
                     "name": "Nidalee",
@@ -4286,7 +4335,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nilah",
                     "key": "895",
                     "name": "Nilah",
@@ -4336,7 +4385,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nocturne",
                     "key": "56",
                     "name": "Nocturne",
@@ -4386,7 +4435,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Nunu",
                     "key": "20",
                     "name": "Nunu & Willump",
@@ -4436,7 +4485,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Olaf",
                     "key": "2",
                     "name": "Olaf",
@@ -4486,7 +4535,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Orianna",
                     "key": "61",
                     "name": "Orianna",
@@ -4536,7 +4585,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ornn",
                     "key": "516",
                     "name": "Ornn",
@@ -4586,7 +4635,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Pantheon",
                     "key": "80",
                     "name": "Pantheon",
@@ -4636,7 +4685,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Poppy",
                     "key": "78",
                     "name": "Poppy",
@@ -4686,7 +4735,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Pyke",
                     "key": "555",
                     "name": "Pyke",
@@ -4736,7 +4785,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Qiyana",
                     "key": "246",
                     "name": "Qiyana",
@@ -4786,7 +4835,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Quinn",
                     "key": "133",
                     "name": "Quinn",
@@ -4836,7 +4885,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Rakan",
                     "key": "497",
                     "name": "Rakan",
@@ -4885,7 +4934,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Rammus",
                     "key": "33",
                     "name": "Rammus",
@@ -4935,7 +4984,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "RekSai",
                     "key": "421",
                     "name": "Rek'Sai",
@@ -4984,7 +5033,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Rell",
                     "key": "526",
                     "name": "Rell",
@@ -5034,7 +5083,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Renata",
                     "key": "888",
                     "name": "Renata Glasc",
@@ -5084,7 +5133,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Renekton",
                     "key": "58",
                     "name": "Renekton",
@@ -5134,7 +5183,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Rengar",
                     "key": "107",
                     "name": "Rengar",
@@ -5184,7 +5233,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Riven",
                     "key": "92",
                     "name": "Riven",
@@ -5234,7 +5283,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Rumble",
                     "key": "68",
                     "name": "Rumble",
@@ -5284,7 +5333,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ryze",
                     "key": "13",
                     "name": "Ryze",
@@ -5334,7 +5383,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Samira",
                     "key": "360",
                     "name": "Samira",
@@ -5383,7 +5432,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sejuani",
                     "key": "113",
                     "name": "Sejuani",
@@ -5433,7 +5482,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Senna",
                     "key": "235",
                     "name": "Senna",
@@ -5483,7 +5532,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Seraphine",
                     "key": "147",
                     "name": "Seraphine",
@@ -5533,7 +5582,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sett",
                     "key": "875",
                     "name": "Sett",
@@ -5583,7 +5632,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Shaco",
                     "key": "35",
                     "name": "Shaco",
@@ -5632,7 +5681,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Shen",
                     "key": "98",
                     "name": "Shen",
@@ -5681,7 +5730,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Shyvana",
                     "key": "102",
                     "name": "Shyvana",
@@ -5731,7 +5780,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Singed",
                     "key": "27",
                     "name": "Singed",
@@ -5781,7 +5830,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sion",
                     "key": "14",
                     "name": "Sion",
@@ -5831,7 +5880,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sivir",
                     "key": "15",
                     "name": "Sivir",
@@ -5880,7 +5929,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Skarner",
                     "key": "72",
                     "name": "Skarner",
@@ -5930,7 +5979,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sona",
                     "key": "37",
                     "name": "Sona",
@@ -5980,7 +6029,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Soraka",
                     "key": "16",
                     "name": "Soraka",
@@ -6030,7 +6079,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Swain",
                     "key": "50",
                     "name": "Swain",
@@ -6080,7 +6129,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Sylas",
                     "key": "517",
                     "name": "Sylas",
@@ -6130,7 +6179,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Syndra",
                     "key": "134",
                     "name": "Syndra",
@@ -6179,7 +6228,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "TahmKench",
                     "key": "223",
                     "name": "Tahm Kench",
@@ -6229,7 +6278,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Taliyah",
                     "key": "163",
                     "name": "Taliyah",
@@ -6279,7 +6328,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Talon",
                     "key": "91",
                     "name": "Talon",
@@ -6328,7 +6377,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Taric",
                     "key": "44",
                     "name": "Taric",
@@ -6378,7 +6427,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Teemo",
                     "key": "17",
                     "name": "Teemo",
@@ -6428,7 +6477,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Thresh",
                     "key": "412",
                     "name": "Thresh",
@@ -6478,7 +6527,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Tristana",
                     "key": "18",
                     "name": "Tristana",
@@ -6528,7 +6577,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Trundle",
                     "key": "48",
                     "name": "Trundle",
@@ -6578,7 +6627,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Tryndamere",
                     "key": "23",
                     "name": "Tryndamere",
@@ -6628,7 +6677,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "TwistedFate",
                     "key": "4",
                     "name": "Twisted Fate",
@@ -6677,7 +6726,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Twitch",
                     "key": "29",
                     "name": "Twitch",
@@ -6727,7 +6776,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Udyr",
                     "key": "77",
                     "name": "Udyr",
@@ -6777,7 +6826,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Urgot",
                     "key": "6",
                     "name": "Urgot",
@@ -6827,7 +6876,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Varus",
                     "key": "110",
                     "name": "Varus",
@@ -6877,7 +6926,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Vayne",
                     "key": "67",
                     "name": "Vayne",
@@ -6927,7 +6976,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Veigar",
                     "key": "45",
                     "name": "Veigar",
@@ -6976,7 +7025,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Velkoz",
                     "key": "161",
                     "name": "Vel'Koz",
@@ -7025,7 +7074,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Vex",
                     "key": "711",
                     "name": "Vex",
@@ -7074,7 +7123,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Vi",
                     "key": "254",
                     "name": "Vi",
@@ -7124,7 +7173,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Viego",
                     "key": "234",
                     "name": "Viego",
@@ -7174,7 +7223,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Viktor",
                     "key": "112",
                     "name": "Viktor",
@@ -7223,7 +7272,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Vladimir",
                     "key": "8",
                     "name": "Vladimir",
@@ -7272,7 +7321,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Volibear",
                     "key": "106",
                     "name": "Volibear",
@@ -7322,7 +7371,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Warwick",
                     "key": "19",
                     "name": "Warwick",
@@ -7372,7 +7421,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Xayah",
                     "key": "498",
                     "name": "Xayah",
@@ -7421,7 +7470,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Xerath",
                     "key": "101",
                     "name": "Xerath",
@@ -7470,7 +7519,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "XinZhao",
                     "key": "5",
                     "name": "Xin Zhao",
@@ -7520,7 +7569,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Yasuo",
                     "key": "157",
                     "name": "Yasuo",
@@ -7570,7 +7619,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Yone",
                     "key": "777",
                     "name": "Yone",
@@ -7620,7 +7669,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Yorick",
                     "key": "83",
                     "name": "Yorick",
@@ -7670,7 +7719,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Yuumi",
                     "key": "350",
                     "name": "Yuumi",
@@ -7720,7 +7769,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zac",
                     "key": "154",
                     "name": "Zac",
@@ -7770,7 +7819,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zed",
                     "key": "238",
                     "name": "Zed",
@@ -7819,7 +7868,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zeri",
                     "key": "221",
                     "name": "Zeri",
@@ -7868,7 +7917,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Ziggs",
                     "key": "115",
                     "name": "Ziggs",
@@ -7917,7 +7966,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zilean",
                     "key": "26",
                     "name": "Zilean",
@@ -7967,7 +8016,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zoe",
                     "key": "142",
                     "name": "Zoe",
@@ -8017,7 +8066,7 @@ export default {
                     }
                 },
                 {
-                    "version": "13.1.1",
+                    "version": "13.9.1",
                     "id": "Zyra",
                     "key": "143",
                     "name": "Zyra",

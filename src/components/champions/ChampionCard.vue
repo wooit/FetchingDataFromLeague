@@ -15,13 +15,14 @@ export default {
     return{
       url: '',
       championData: '',
-      copyKey: ''
+      copyKey: '',
+      urlSmallImgChampion: process.env.VUE_APP_GET_CHAMPION_IMAGE
     }
   },
   methods: {
     fetchDataChampFromId(){
       this.championData = this.$store.getters['champions/getChampionNameAndId'].find( champ => champ.key === this.championKey.toString())
-      this.url = 'https://ddragon.leagueoflegends.com/cdn/13.5.1/img/champion/'+this.championData.id+'.png'
+      this.url = this.urlSmallImgChampion + this.championData.id +'.png'
     },
     redirectToChampionInfos(){
       //cant modify prop, so I need a copy of the prop. using toString so i can modify the number
