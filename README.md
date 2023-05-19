@@ -33,3 +33,7 @@ $ git clone the repo
 $ cd ../path/to/the/file
 $ npm install (then past your API KEY in the variable VUE_APP_API_LEAGUE_OF_LEGENDS_KEY in .env file)
 $ npm run serve
+```
+***
+### Additional infos for testing purpose
+When going to the "Summoner section", you can use the following username **G2 Bane** and select the region **Western-Europe** in order to test this feature if you don't know anyone playing this game.

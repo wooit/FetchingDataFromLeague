@@ -41,6 +41,8 @@ export default {
   .summoner-icon {
     border-radius: 20px;
     border: white solid;
+    max-height: 134px;
+    max-width: 134px;
   }
 
   .round-level {
