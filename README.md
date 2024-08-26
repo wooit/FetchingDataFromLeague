@@ -11,6 +11,11 @@ Before I started this project, there was only one feature that I wished I could 
 wanted to be able to see the list of all the champions with which I already got the reward chest. After looking at the
 documentation of the API, I saw that it was possible and that much more information were available. So I decided
 to take advantages of that by doing this hobby project by using Vue.js which I got to appreciate a lot lately.
+
+IMPORTANT: This project is now depreciated. Since January 2024, many routes have changed (for the worst).
+Current documentation of the API is out of date. Some information are not provided anymore making some of my features obsolete.
+It's not possible to get data from players as easily as before. A deep redesign of my interface is necessary in order to make it 
+work as before.
 ## Technologies
 ***
 A list of technologies used within the project:
