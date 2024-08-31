@@ -1,10 +1,16 @@
 # Fetching Data from League of Legends API
 ***
-#Demo presentation Homepage
+#Demo presentation for each section (after API changes)
 
 https://github.com/user-attachments/assets/4f961a22-b329-47ec-94be-a5a7fb6ea838
 
 https://github.com/user-attachments/assets/97b103ef-966e-42a6-90f7-1cf1494b9473
+
+https://github.com/user-attachments/assets/ce37faa4-fc3e-4c7d-abf1-97260dff73d4
+
+https://github.com/user-attachments/assets/8a03b478-7863-4023-8b90-9cd45f0b943b
+
+https://github.com/user-attachments/assets/47f96a3e-aa9f-4055-add2-4c56613f59aa
 
 
 ## Table of Contents
