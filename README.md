@@ -1,8 +1,10 @@
 # Fetching Data from League of Legends API
 ***
-Demo presentation
+#Demo presentation
+*
 https://github.com/user-attachments/assets/4f961a22-b329-47ec-94be-a5a7fb6ea838
-
+*
+https://github.com/user-attachments/assets/97b103ef-966e-42a6-90f7-1cf1494b9473
 
 ## Table of Contents
 1. [General Info](#general-info)
